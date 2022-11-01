@@ -14,192 +14,222 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
         * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Bebas Neue', cursive;
-}
+            margin: 0;
+            padding: 0;
+            font-family: 'Bebas Neue', cursive;
+        }
+
         /* sdkjfajsdgjkasdjgk */
-body {
-    background-image: linear-gradient(rgba(0.1, 1, 1, 0.2), rgba(0.1, 1, 0, 0.1));
-}
-.header {
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    padding-top: 18%;
-    padding-bottom: 35%;
-}
+        body {
+            background-image: linear-gradient(rgba(0.1, 1, 1, 0.2), rgba(0.1, 1, 0, 0.1));
+        }
 
-.part1 {  /* 팀 소개페이지 */
-    min-height: 32vh;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
+        .header {
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            padding-top: 18%;
+            padding-bottom: 35%;
+        }
 
-.part2 {  /* 팀 프로필 카드 */
-    min-height: 68vh;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    display: flex;
-    top: 30%;
-}
+        .part1 { /* 팀 소개페이지 */
+            min-height: 32vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
 
-.part3 {  /* 팀 소개 */
-    min-height: 100vh;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
+        .part2 { /* 팀 프로필 카드 */
+            min-height: 68vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            top: 30%;
+        }
 
-.part4 {  /* 방명록 */
-    min-height: 100vh;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    top: 30%;
-}
+        .part3 { /* 팀 소개 */
+            min-height: 100vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
 
-.card-container {
-    display: flex;
-    flex-direction: column;
-    width: 85%;
-    margin: auto;
-    padding-bottom: 20px;
-    border: 2px;
-}
+        .part4 { /* 방명록 */
+            min-height: 80vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            top: 10%;
+        }
 
-.card-1 {
-    display: flex;
-    border: 2px;
-}
-.card-image-1 {
-    width: 30%;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border: black;
-}
-.card-image-1 img {
-    width: 70%;
-    min-height: 70%;
-}
-.card-text-1 {
-    width: 70%;
-    padding: 10px;
-    font-family: 'Roboto Condensed', sans-serif;
-}
+        .part5 {
+            min-height: 100vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: center;
+        }
+
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            width: 85%;
+            margin: auto;
+            padding-bottom: 20px;
+            border: 2px;
+        }
+
+        .card-1 {
+            display: flex;
+            border: 2px;
+        }
+
+        .card-image-1 {
+            width: 30%;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border: black;
+        }
+
+        .card-image-1 img {
+            width: 70%;
+            min-height: 70%;
+        }
+
+        .card-text-1 {
+            width: 70%;
+            padding: 10px;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
 
 
-nav{
+        nav {
 
-}
+        }
 
-nav img{
-    width: 150px;
-    height: 150px;
-    padding-top: 20px;
-}
+        nav img {
+            width: 150px;
+            height: 150px;
+            padding-top: 20px;
+        }
 
-.maintitle {
-    flex: 1;
-    text-align: center;
-    padding-top: 50px;
-}
+        .maintitle {
+            flex: 1;
+            text-align: center;
+            padding-top: 50px;
+        }
 
-.maintitle a{
-    color: rgb(10, 6, 6);
-    text-decoration: none;
-    font-size: 90px;
-}
-/* this is underline effect when the cursor hovers over the title */
-.maintitle::after{
-    content: '';
-    width: 0%;
-    height: 6px;
-    background: #090707;
-    display: block;
-    margin: auto;
-    transition: 1.2s;
-}
+        .maintitle a {
+            color: rgb(10, 6, 6);
+            text-decoration: none;
+            font-size: 90px;
+        }
 
-.maintitle:hover::after{
-    width: 42%;
-}
-/* up to here (hover effect) */
+        /* this is underline effect when the cursor hovers over the title */
+        .maintitle::after {
+            content: '';
+            width: 0%;
+            height: 6px;
+            background: #090707;
+            display: block;
+            margin: auto;
+            transition: 1.2s;
+        }
 
-.button-down-1 {
-    display: none;
-}
+        .maintitle:hover::after {
+            width: 42%;
+        }
 
-.button-down-1:hover + .button-down-1{
-    display: inline-block;
-}
+        /* up to here (hover effect) */
 
-/* member profile cards */
+        .button-down-1 {
+            display: none;
+        }
 
-.profile-card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-}
+        .button-down-1:hover + .button-down-1 {
+            display: inline-block;
+        }
 
-.profile-title {
-  color: grey;
-  font-size: 18px;
-}
+        /* member profile cards */
 
-profile-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
+        .profile-card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+        }
 
-profile a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
-}
+        .profile-title {
+            color: grey;
+            font-size: 18px;
+        }
 
-button:hover, a:hover {
-  opacity: 0.7;
-}
+        profile-button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
 
-/* end of member profile card */
+        profile a {
+            text-decoration: none;
+            font-size: 22px;
+            color: black;
+        }
 
-.comment-box {
-    width: 90%;
-    color: black;
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-}
+        button:hover, a:hover {
+            opacity: 0.7;
+        }
 
-a:link {
-    color: black;
-    background-color: transparent;
-    text-decoration: none;
-}
+        /* end of member profile card */
+
+        .comment-box {
+            width: 90%;
+            color: black;
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        a:link {
+            color: black;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        /* this is the comment list section */
+
+        .comment-list {
+            width: 90%;
+            color: black;
+            position: relative;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        /* end of comment list */
     </style>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             show_comment();
         })
+
         function save_comment() {
             let name = $('#name').val()
             let comment = $('#comment').val()
@@ -207,13 +237,14 @@ a:link {
             $.ajax({
                 type: "POST",
                 url: "/guest",
-                data: {'name_give':name, 'comment_give':comment},
+                data: {'name_give': name, 'comment_give': comment},
                 success: function (response) {
                     alert(response["msg"])
                     window.location.reload()
                 }
             });
         }
+
         function show_comment() {
             $('#comment-list').empty()
             $.ajax({
@@ -241,12 +272,13 @@ a:link {
         }
 
         let likes = 0
+
         function like_count() {
             likes = likes + 1
-             $.ajax({
+            $.ajax({
                 type: "POST",
                 url: "/like",
-                data: {'like_give':likes},
+                data: {'like_give': likes},
                 success: function (response) {
                     console.log(likes)
                 }
@@ -267,7 +299,7 @@ a:link {
                 <img src="https://cdn-icons-png.flaticon.com/512/6699/6699362.png" alt="image"/>
             </div>
             <div class="card-text-1">
-                <p style="font-size: 30px; line-height: 1.4em"><b>NFT (Non-Fungible Team : 대체 불가능한 존재가 돼라!)<br> </p>
+                <p style="font-size: 30px; line-height: 1.4em"><b>NFT (Non-Fungible Team : 대체 불가능한 존재가 돼라!)<br></p>
                 <p style="font-size: 18px">저희는 대체 불가능한 토큰 NFT(Non-Fungible Token)와 같이 대체 불가능한 개발자를 목표로 하는 팀 입니다!</b></p>
                 <br>
                 <br>
@@ -353,14 +385,38 @@ a:link {
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;
-                <button onclick = "like_count()">좋아요</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+                <button onclick="like_count()">좋아요</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
                 <button onclick="save_comment(),show_comment()">댓글 남기기</button>
             </p>
         </div>
     </div>
 </section>
-<section>
-    <div class-="mycards" id="comment-list">
+<section class="part5">
+    <div class="comment-list">
+        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">List group item heading</h5>
+                <small>3 days ago</small>
+            </div>
+            <p class="mb-1">Some placeholder content in a paragraph.</p>
+            <small>And some small print.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">List group item heading</h5>
+                <small class="text-muted">3 days ago</small>
+            </div>
+            <p class="mb-1">Some placeholder content in a paragraph.</p>
+            <small class="text-muted">And some muted small print.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">List group item heading</h5>
+                <small class="text-muted">3 days ago</small>
+            </div>
+            <p class="mb-1">Some placeholder content in a paragraph.</p>
+            <small class="text-muted">And some muted small print.</small>
+        </a>
     </div>
 </section>
 
