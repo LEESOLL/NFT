@@ -45,5 +45,12 @@ def like_count():
     db.like.insert_one(doc)
     return jsonify({'msg': '❤좋아요 좋아요❤'})
 
+@app.route("/like", methods=["GET"])
+def like_get():
+    like_list = list(db.like.find({}, {'_id': False}))
+    count = len(like_list) + 1
+
+    return jsonify({'counts': count})
+
 if __name__ == '__main__':
     app.run('0.0.0.0', port=5000, debug=True)
