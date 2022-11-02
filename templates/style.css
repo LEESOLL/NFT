@@ -68,10 +68,24 @@ body {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     border: black;
+    margin-right : -80px;
 }
 .card-image-1 img {
-    width: 70%;
-    min-height: 70%;
+    width: 400px;
+    min-height: 100%;
+    height: 640px;
+    margin-top:20px;
+        /*background-image: ;*/
+        background-size: cover;
+        background-position: center 50%;
+
+        border-radius: 10px;
+
+        display :flex;
+        flex-direction : column;
+        justify-content: center;
+        aligh-items : center;
+
 }
 .card-text-1 {
     width: 70%;
