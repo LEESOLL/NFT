@@ -4,53 +4,250 @@ app = Flask(__name__)
 
 from pymongo import MongoClient
 
-client = MongoClient("mongodb+srv://test:sparta@cluster0.ky4ufb9.mongodb.net/?retryWrites=true&w=majority")
+client = MongoClient("mongodb+srv://test:sparta@cluster0.9pyyebx.mongodb.net/Cluster0?retryWrites=true&w=majority")
 db = client.dbsparta
+
+
+# ------------------------------------------ CONNECTION ----------------------------------------
 
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('main.html')
 
 
-@app.route("/guest", methods=["POST"])
-def guest_post():
-    name_receive = request.form["name_give"]
-    comment_receive = request.form["comment_give"]
+@app.route('/oong')
+def oong():
+    return render_template('oong.html')
+
+
+@app.route('/song')
+def song():
+    return render_template('song.html')
+
+
+@app.route('/sol')
+def sol():
+    return render_template('sol.html')
+
+
+@app.route('/chan')
+def chan():
+    return render_template('chan.html')
+
+
+@app.route('/hong')
+def hong():
+    return render_template('hong.html')
+
+
+# ------------------------------------------ COMMENTS ------------------------------------------
+
+# ------------------------------------------------------------ POST START
+
+@app.route("/comment/oong", methods=["POST"])
+def oongcomment_post():
+    oongname_receive = request.form["oongname_give"]
+    oongcomment_receive = request.form["oongcomment_give"]
 
     doc = {
-        'name': name_receive,
-        'comment': comment_receive
+        'oongname': oongname_receive,
+        'oongcomment': oongcomment_receive
     }
 
-    db.guest.insert_one(doc)
+    db.oongfan.insert_one(doc)
     return jsonify({'msg': '앙응원띠!'})
 
 
-@app.route("/guest", methods=["GET"])
-def guest_get():
-    comment_list = list(db.guest.find({}, {'_id': False}))
-    return jsonify({'comments': comment_list})
-
-@app.route("/like", methods=["POST"])
-def like_count():
-    like_receive = request.form["like_give"]
-
-    like_list = list(db.like.find({}, {'_id': False}))
-    count = len(like_list) + 1
+@app.route("/comment/song", methods=["POST"])
+def songcomment_post():
+    songname_receive = request.form["songname_give"]
+    songcomment_receive = request.form["songcomment_give"]
 
     doc = {
-        'likes' : count
+        'songname': songname_receive,
+        'songcomment': songcomment_receive
     }
-    db.like.insert_one(doc)
-    return jsonify({'msg': '❤좋아요 좋아요❤'})
 
-@app.route("/like", methods=["GET"])
-def like_get():
-    like_list = list(db.like.find({}, {'_id': False}))
-    count = len(like_list) + 1
+    db.songfan.insert_one(doc)
+    return jsonify({'msg': '앙응원띠!'})
 
-    return jsonify({'counts': count})
+
+@app.route("/comment/sol", methods=["POST"])
+def solcomment_post():
+    solname_receive = request.form["solname_give"]
+    solcomment_receive = request.form["solcomment_give"]
+
+    doc = {
+        'solname': solname_receive,
+        'solcomment': solcomment_receive
+    }
+
+    db.solfan.insert_one(doc)
+    return jsonify({'msg': '앙응원띠!'})
+
+
+@app.route("/comment/chan", methods=["POST"])
+def chancomment_post():
+    channame_receive = request.form["channame_give"]
+    chancomment_receive = request.form["chancomment_give"]
+
+    doc = {
+        'channame': channame_receive,
+        'chancomment': chancomment_receive
+    }
+
+    db.chanfan.insert_one(doc)
+    return jsonify({'msg': '앙응원띠!'})
+
+
+@app.route("/comment/hong", methods=["POST"])
+def hongcomment_post():
+    hongname_receive = request.form["hongname_give"]
+    hongcomment_receive = request.form["hongcomment_give"]
+
+    doc = {
+        'hongname': hongname_receive,
+        'hongcomment': hongcomment_receive
+    }
+
+    db.hongfan.insert_one(doc)
+    return jsonify({'msg': '앙응원띠!'})
+
+
+# ------------------------------------------------------------------ POST END
+
+
+#  -----------------------------------------------  GET START
+
+@app.route("/comment/oong", methods=["GET"])
+def oongcomment_get():
+    oongcomment_list = list(db.oongfan.find({}, {'_id': False}))
+    return jsonify({'oongcomments': oongcomment_list})
+
+
+@app.route("/comment/song", methods=["GET"])
+def songcomment_get():
+    songcomment_list = list(db.songfan.find({}, {'_id': False}))
+    return jsonify({'songcomments': songcomment_list})
+
+
+@app.route("/comment/sol", methods=["GET"])
+def solcomment_get():
+    solcomment_list = list(db.solfan.find({}, {'_id': False}))
+    return jsonify({'solcomments': solcomment_list})
+
+
+@app.route("/comment/chan", methods=["GET"])
+def chancomment_get():
+    chancomment_list = list(db.chanfan.find({}, {'_id': False}))
+    return jsonify({'chancomments': chancomment_list})
+
+
+@app.route("/comment/hong", methods=["GET"])
+def hongcomment_get():
+    hongcomment_list = list(db.hongfan.find({}, {'_id': False}))
+    return jsonify({'hongcomments': hongcomment_list})
+
+# ------------------------------- GET END
+
+
+# ------------------------------------- LIKES ---------------------------------------------
+
+@app.route('/like1', methods=['POST'])
+def update_like_cnt1():
+    like = db.likes.find_one({'name': '김태웅'})['likes']
+    print(like)
+
+    db.likes.update_one({'name': '김태웅'}, {'$set': {'likes': like + 1}})
+    like = db.likes.find_one({'name': '김태웅'})['likes']
+
+    return jsonify({'name': '김태웅', 'like': like})
+
+
+@app.route('/like1', methods=['GET'])
+def get_like_cnt1():
+    like = db.likes.find_one({'name': '김태웅'})['likes']
+    print(like)
+
+    return jsonify({'name': '김태웅', 'like': like})
+
+
+@app.route('/like2', methods=['POST'])
+def update_like_cnt2():
+    like = db.likes.find_one({'name': '김송미'})['likes']
+    print(like)
+
+    db.likes.update_one({'name': '김송미'}, {'$set': {'likes': like + 1}})
+    like = db.likes.find_one({'name': '김송미'})['likes']
+
+    return jsonify({'name': '김송미', 'like': like})
+
+
+@app.route('/like2', methods=['GET'])
+def get_like_cnt2():
+    like = db.likes.find_one({'name': '김송미'})['likes']
+    print(like)
+
+    return jsonify({'name': '김송미', 'like': like})
+
+
+@app.route('/like3', methods=['POST'])
+def update_like_cnt3():
+    like = db.likes.find_one({'name': '이솔'})['likes']
+    print(like)
+
+    db.likes.update_one({'name': '이솔'}, {'$set': {'likes': like + 1}})
+    like = db.likes.find_one({'name': '이솔'})['likes']
+
+    return jsonify({'name': '이솔', 'like': like})
+
+
+@app.route('/like3', methods=['GET'])
+def get_like_cnt3():
+    like = db.likes.find_one({'name': '이솔'})['likes']
+    print(like)
+
+    return jsonify({'name': '이솔', 'like': like})
+
+
+@app.route('/like4', methods=['POST'])
+def update_like_cnt4():
+    like = db.likes.find_one({'name': '박찬환'})['likes']
+    print(like)
+
+    db.likes.update_one({'name': '박찬환'}, {'$set': {'likes': like + 1}})
+    like = db.likes.find_one({'name': '박찬환'})['likes']
+
+    return jsonify({'name': '박찬환', 'like': like})
+
+
+@app.route('/like4', methods=['GET'])
+def get_like_cnt4():
+    like = db.likes.find_one({'name': '박찬환'})['likes']
+    print(like)
+
+    return jsonify({'name': '박찬환', 'like': like})
+
+
+@app.route('/like5', methods=['POST'])
+def update_like_cnt5():
+    like = db.likes.find_one({'name': '홍승엽'})['likes']
+    print(like)
+
+    db.likes.update_one({'name': '홍승엽'}, {'$set': {'likes': like + 1}})
+    like = db.likes.find_one({'name': '홍승엽'})['likes']
+
+    return jsonify({'name': '홍승엽', 'like': like})
+
+
+@app.route('/like5', methods=['GET'])
+def get_like_cnt5():
+    like = db.likes.find_one({'name': '홍승엽'})['likes']
+    print(like)
+
+    return jsonify({'name': '홍승엽', 'like': like})
+
 
 if __name__ == '__main__':
     app.run('0.0.0.0', port=5000, debug=True)

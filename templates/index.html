@@ -347,9 +347,9 @@
     </nav>
 </section> <!-- 제목 페이지 -->
 <section class="part1">
-    <div class="card-container">
+    <div class="card-container" style="position: center">
         <div class="card-1"> <!-- Card 1 -->
-         <div class="card-image-1"><img src="https://img.hankyung.com/photo/202207/AD.30616227.1.png" alt="image"/></div>
+         <div class="card-image-1"><img src="https://img.hankyung.com/photo/202207/AD.30616227.1.png" alt="image" style="max-height: 50%; max-width: 100%"/></div>
             <div class="card-text-1">
                 <p style="font-size: 35px; line-height: 1.4em"><b>NFT (Non-Fungible&nbsp; Team) : 대체&nbsp; 불가능한&nbsp; 존재가&nbsp; 돼라!</b><br></p><br>
                 <p style="font-size: 18px">저희는 &nbsp; 대체 &nbsp;불가능한 &nbsp;토큰&nbsp; NFT(Non-Fungible Token)처럼 &nbsp;대체 &nbsp;불가능한&nbsp;  개발자를 &nbsp;목표로&nbsp; 하는&nbsp; 팀 입니다!</br></p>
@@ -362,7 +362,7 @@
                     <br>어느 &nbsp; 곳에서도 &nbsp; 스며들고 &nbsp; 녹아들어&nbsp; 협업을&nbsp; 위한&nbsp; 완벽한 &nbsp; 시너지를&nbsp; 만듭니다.</p><p><br> 개발자 &nbsp;붐이&nbsp;
                     일어난&nbsp; 지&nbsp; 수년&nbsp;째 &nbsp;입니다. <br> 여러&nbsp; 교육&nbsp; 기관을&nbsp; 통해 &nbsp;수요가 &nbsp;충족 &nbsp;되고&nbsp; 있지만&nbsp; 역량&nbsp; 있는&nbsp; 개발자에 대한 &nbsp; 수요는&nbsp; 턱 &nbsp;없이 &nbsp;부족한 &nbsp; 상황입니다. </p><p><br>대체&nbsp; 가능한 &nbsp;역량의&nbsp; 개발자가 &nbsp;아닌,
                     <strong> <span style="color: darkslategrey; border-style:double; border-color: gray; width:60%; margin:0 auto; padding:3px; text-align:center">대체
-                    불가능한(Non-Fongible)</span></strong>&nbsp; 역량의 &nbsp;개발자가&nbsp; 되기 &nbsp;위해&nbsp; 모인&nbsp; <br><br>저희 <span style="font-size : 18px; color: darkslategrey; border-style:double; width:50%; margin:0 auto; padding:3px; text-align:center"><strong>NFT(Non-Fongible Team)</strong></span>&nbsp;의 팀원들을 소개하겠습니다.
+                    불가능한(Non-Fungible)</span></strong>&nbsp; 역량의 &nbsp;개발자가&nbsp; 되기 &nbsp;위해&nbsp; 모인&nbsp; <br><br>저희 <span style="font-size : 18px; color: darkslategrey; border-style:double; width:50%; margin:0 auto; padding:3px; text-align:center"><strong>NFT(Non-Fongible Team)</strong></span>&nbsp;의 팀원들을 소개하겠습니다.
                     <br><br>
             </div>
         </div> <!-- End of Card 1 -->
@@ -533,26 +533,21 @@
     </div>
 </section><!-- 팀 소개 -->
 <section class="part4">
-    <div class="comment-box">
+    <div class="comment-box" style="padding-left: 470px">
         <div class="mb-3">
             <label for="name" class="form-label">닉네임&nbsp;</label>
             <input type="email" class="form-control" id="name" placeholder="nickname"
-                   style="width: 295px; font-size: 17px; border: black 6px;">
+                   style="width: 200px; font-size: 17px; border: black 6px;">
         </div>
         <br>
         <div class="mb-3">
-            <label for="comment" class="form-label">댓글&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-            <textarea class="form-control" id="comment" cols="40" rows="5"
-                      style="font-size: 17px" placeholder="comment here"></textarea>
+            <label for="comment" class="form-label">댓글</label>
+            <textarea class="form-control" id="comment"
+                      style="font-size: 17px; width: 50%" placeholder="comment here"></textarea>
         </div>
         <div style="text-align: center">
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;
-                <button onclick="like_count()">좋아요</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+            <p>
+                <button onclick="like_count()">좋아요</button>
                 <button onclick="save_comment(),show_comment()">댓글 남기기</button>
             </p>
         </div>

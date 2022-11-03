@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Intro Lee Sol</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Bebas Neue';
+        }
+
+        h1 {
+            background: linear-gradient(to right, rgb(199, 219, 245), rgb(242, 243, 248));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            pointer-events: none;
+            animation: fade ease-in 2s;
+            animation-fill-mode: forwards;
+            opacity: 0;
+
+            font-size: 100px;
+        }
+
+        .paragraph {
+            margin-left: 70px;
+            margin-right: 20px;
+            font-size: 20px;
+        }
+
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #left_to_right_effect {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .img {
+            width: 100%;
+            height: 100vh;
+            background-image: url("https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F7ae0bdf2-a63b-4019-abee-1e3d7d6c7fb2%2Fclouds-gd920e430a_1920.jpg?table=block&id=e77e4de3-96cb-44f0-86cc-4d399f50a908&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=b2c70268-ad08-4eae-b16b-2c9779561276&cache=v2");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+            scroll-snap-align: start;
+        }
+
+        .img-text {
+            position: absolute;
+            top: 40%;
+            left: 30%;
+            color: white;
+            font-size: 40px;
+        }
+
+        .one {
+            background-color: #3381B2;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            background-attachment: fixed;
+        }
+
+        .two {
+            background-color: #FFFFFF;
+            min-height: 32vh;
+            width: 100%;
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .three {
+            background-color: #3381B2;
+            width: 100%;
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .four {
+            background-color: #FFFFFF;
+            width: 100%;
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .five {
+            background-color: #3381B2;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .card-image-1 img {
+            width: 70%;
+            min-height: 70%;
+        }
+
+        .comment-box {
+            width: 90%;
+            color: black;
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        a:link {
+            color: black;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        .solimage {
+            margin-left: 50px;
+            max-width: 400px;
+            max-height: 400px;
+        }
+
+        .infocard {
+            border-color: transparent;
+        }
+
+        .information_box {
+            animation: forwards;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            get_like3();
+            show_comment();
+        })
+        window.onload = function () {
+            const EFFECT = document.querySelector('#left_to_right_effect');
+
+            window.addEventListener('scroll', scrollEffect);
+
+            function scrollEffect() {
+                if (window.scrollY >= 500) {
+                    EFFECT.style.opacity = '1';
+                    EFFECT.style.transform = 'translateX(0px)';
+                    EFFECT.style.transition = '1s ease-in-out';
+                } else {
+                    EFFECT.style.opacity = '0';
+                    EFFECT.style.transform = 'translateX(-50px)';
+                }
+            }
+
+            scrollEffect();
+        }
+
+        function save_solcomment() {
+            let solname = $('#solname').val()
+            let solcomment = $('#solcomment').val()
+
+            $.ajax({
+                type: "POST",
+                url: "/comment/sol",
+                data: {'solname_give': solname, 'solcomment_give': solcomment},
+                success: function (response) {
+                    alert(response["msg"])
+                    window.location.reload()
+                }
+            });
+        }
+
+        function show_comment() {
+            $('#solcomment-list').empty()
+            $.ajax({
+                type: "GET",
+                url: "/comment/sol",
+                data: {},
+                success: function (response) {
+                    let rows = response['solcomments']
+                    for (let i = 0; i < rows.length; i++) {
+                        let solname = rows[i]['solname']
+                        let solcomment = rows[i]['solcomment']
+
+                        let sol_html = `<div class="card">
+                                            <div class="card-body">
+                                                <blockquote class="blockquote mb-0">
+                                                    <p>${solcomment}</p>
+                                                    <footer class="blockquote-footer">${solname}</footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>`
+                        $('#solcomment-list').append(sol_html)
+                    }
+                }
+            });
+        }
+
+        function like_count3() {
+            $.ajax({
+                type: "POST",
+                url: "/like3",
+                data: {},
+                success: function (response) {
+                    alert('좋아요를 눌러주신 그대는 👼💘')
+                    $('#likesu3').text(response['like'])
+                }
+            })
+        }
+
+        function get_like3() {
+            $.ajax({
+                type: "GET",
+                url: "/like3",
+                data: {},
+                success: function (response) {
+                    let likecnt3 = response['like']
+                    $('#likesu3').text(likecnt3)
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+<div class="img"></div>
+<div class="img-text">
+    <h1>Non-Fungible Team</h1>
+    <h1>Captain Lee Sol</h1>
+</div>
+
+<section class="one">
+    <div id="left_to_right_effect">
+        <div class="solimage">
+            <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F14c067ea-9308-4356-a5ac-bed628498405%2FKakaoTalk_20221027_164552260.jpg?table=block&id=6d3dd4d3-2a98-4c11-ae85-09b669143ce8&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=1340&userId=b2c70268-ad08-4eae-b16b-2c9779561276&cache=v2"
+                 width="100%" height="100%"/>
+        </div>
+        <div>
+            <h2 class="paragraph" style="color: white; font-size: 80px">Let me introduce myself</h2><br>
+            <h3 class="paragraph" style="color: white; font-size: 30px; font-family: 'Noto Sans', sans-serif;">
+                안녕하세요! NFT의 팀장을 맡은 이솔입니다!</h3><br>
+            <p class="paragraph" style="color: white; width: 85%; line-height: 2">
+                &nbsp;&nbsp;&nbsp;&nbsp;컴퓨터 공학을 전공했지만, 카페 아르바이트가 너무 재밌어서 '난 카페를 창업할래!' 라는 마음으로
+                학부때부터 졸업 후에도 줄 곧 카페일에 종사했습니다.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;그러나 한편으로 학업에는 소홀했던 점이 자꾸 마음에 걸렸습니다. 내가 원해서 입학한 컴퓨터공학과인데 너무 쉽게 전공을 포기해 버린 것은
+                아닌지...
+                그런 생각이 자꾸 든다는 것은 그걸 해야 된다는 뜻이겠지요...?! (카페 창업은 먼 미래에 해도 될 일이니까!!!)<br>&nbsp;&nbsp;&nbsp;&nbsp;그렇게 호다닥 코딩의
+                세계로 다시 들어왔습니다
+                >.-<br>
+                학부때 공부하지 않았던 것에 아쉬움이 많기 때문에 이곳 내배캠에서는 미련없이 공부하자고 다짐했습니다! 정말 열심히 배워서 레벨업 해버릴 테니 우리 모두 함께
+                강.해.지.자.구. 후후...
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;모두 모두 함께 공부하게 되어 너무 반갑고 앞으로 잘 부탁드립니다 ~ !!!</p>
+        </div>
+    </div>
+</section>
+<section class="two">
+    <div class="information_box" style="color:#3381B2">
+        <div>
+            <h2 class="paragraph" style="color: #3381B2; font-size: 80px" align="center">Sol's Information</h2><br>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4" style="padding-top: 30px">
+            <div class="col">
+                <div class="infocard">
+                    <p align="center" style="padding-top: 20px"><i class="fa-solid fa-user fa-8x"></i></p>
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center">Profile</h5>
+                        <p class="card-text">
+                        <li> 이름 : 이솔</li>
+                        <li> 성별 : 여</li>
+                        <li> 생년월일 : 1997.07.05</li>
+                        <li> MBTI : ENFP</li>
+                        <li> 사는곳 : 인천 광역시 연수구</li>
+                        <li> 이메일 : leeso4567@naver.com</li>
+                        <li><a href="mailto:leeso4567@naver.com" class="card-link"><i
+                                class="fa-regular fa-envelope"></i></a>
+                            <a href="https://tobeagoodengineer.tistory.com/" class="card-link"><i
+                                    class="fa-solid fa-blog fa-10px"></i></a>
+                            <a href="https://www.instagram.com/eeeeesol/" class="card-link"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="infocard">
+                    <p align="center" style="padding-top: 20px"><i class="fa-solid fa-school fa-8x"></i></p>
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center">Career</h5>
+                        <p class="card-text">
+                        <li> 2010 - 옥련초등학교 졸업</li>
+                        <li> 2013 - 인송중학교 졸업</li>
+                        <li> 2017 - 연수여자고등학교 졸업</li>
+                        <li> 2021 - 인천대학교 컴퓨터공학과 졸업</li>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="infocard">
+                    <p align="center" style="padding-top: 20px"><i class="fa-solid fa-cloud fa-8x"></i></p>
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center">Interest</h5>
+                        <p class="card-text">
+                        <li> 취미 : 뜨개질, 베이킹</li>
+                        <li> 좋아하는 것 : 커피, 헬스, 수영, 등산</li>
+                        <li> 싫어하는 것 : 민트초코</li>
+                        <li> 장점 : 긍정적, 사교적, 밝은 에너지</li>
+                        <li> 협업 스타일 : 맡은바는 확실하게 하기, 함께 성장해 나가기</li>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section class="three">
+
+</section>
+<section class="four">
+    <div>
+
+    </div>
+</section>
+<section class="five">
+    <div class="comment-box">
+        <div class="mb-3">
+            <input type="email" class="form-control" id="solname" placeholder="nickname"
+                   style="width: 295px; font-size: 17px; border: black 6px;">
+        </div>
+        <br>
+        <div class="mb-3">
+                <textarea class="form-control" id="solcomment" cols="40" rows="5"
+                          style="font-size: 17px" placeholder="comment here"></textarea>
+        </div>
+        <div style="text-align: center">
+            <p>
+                <button onclick="like_count3()" type="button" class="btn btn-dark">좋아요👍<span id="likesu3">0</span>
+                </button>
+                <button onclick="save_solcomment(),show_comment()" type="button" class="btn btn-dark">댓글 남기기</button>
+            </p>
+        </div>
+    </div>
+    <div id="solcomment-list"></div>
+</section>
+</body>
+</html>

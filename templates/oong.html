@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NFTeam: 김태웅</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Bebas Neue';
+        }
+
+        .img {
+            width: 100%;
+            height: 100vh;
+            background-image: url("https://images.wallpaperscraft.com/image/single/sky_clouds_bw_141429_3840x2400.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+            scroll-snap-align: start;
+        }
+
+        .img-text {
+            position: absolute;
+            top: 40%;
+            left: 30%;
+            color: white;
+            font-size: 40px;
+        }
+
+        h1 {
+            background: linear-gradient(to right, rgb(199, 219, 245), rgb(242, 243, 248));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        );
+            pointer-events: none;
+            animation: fade ease-in 3s;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+
+        .paragraph {
+            margin-left: 70px;
+            margin-right: 20px;
+            font-size: 20px;
+        }
+
+
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #left_to_right_effect {
+            width: 100;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+        }
+
+        .container {
+            height: 100vh;
+        }
+
+        .one {
+            background-color: lightgrey;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .two {
+            background-image: linear-gradient(rgba(0.1, 1, 1, 0.2), rgba(0.1, 1, 0, 0.1));
+            min-height: 32vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .three {
+            background-image: linear-gradient(rgba(0.1, 1, 1, 0.2), rgba(0.1, 1, 0, 0.1));
+            min-height: 68vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            display: flex;
+        }
+
+        .four {
+            background-image: linear-gradient(rgba(0.1, 1, 1, 0.2), rgba(0.1, 1, 0, 0.1));
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .five {
+            background-image: linear-gradient(rgba(0.1, 1, 1, 0.2), rgba(0.1, 1, 0, 0.1));
+            min-height: 80vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .six {
+            background-image: linear-gradient(rgba(0.1, 1, 1, 0.2), rgba(0.1, 1, 0, 0.1));
+            min-height: 100vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: center;
+        }
+
+
+        .card-image-1 img {
+            width: 70%;
+            min-height: 70%;
+        }
+
+
+        nav {
+
+        }
+
+        nav img {
+            width: 150px;
+            height: 150px;
+            padding-top: 20px;
+        }
+
+
+        .maintitle a {
+            color: rgb(10, 6, 6);
+            text-decoration: none;
+            font-size: 90px;
+        }
+
+
+
+        .button-down-1:hover + .button-down-1 {
+            display: inline-block;
+        }
+
+
+        profile-button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        profile a {
+            text-decoration: none;
+            font-size: 22px;
+            color: black;
+        }
+
+        button:hover, a:hover {
+            opacity: 0.7;
+        }
+
+        /* end of member profile card */
+
+        .comment-box {
+            width: 90%;
+            color: black;
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        a:link {
+            color: black;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        .hobby-card{
+
+            margin:auto;
+
+
+        }
+        h2{
+            text-align:center;
+            font-size : 17px;
+            color:#505050;
+
+
+        }
+        .hobby-card{
+
+            margin-top:100px;
+
+        }
+
+        .intro{
+
+            margin-left:500px;
+        }
+
+    </style>
+
+    <script>
+        window.onload = function () {
+            const EFFECT = document.querySelector('#left_to_right_effect');
+
+            window.addEventListener('scroll',scrollEffect);
+
+            function scrollEffect () {
+                if(window.scrollY>=500) {
+                    EFFECT.style.opacity = '1';
+                    EFFECT.style.transform = 'translateX(0px)';
+                    EFFECT.style.transition = '1s ease-in-out';
+                }
+                else {
+                    EFFECT.style.opacity = '0';
+                    EFFECT.style.transform = 'translateX(-50px)';
+                }
+            }
+            scrollEffect();
+        }
+        $(document).ready(function () {
+            show_comment();
+            get_like1();
+            $('#part3-box-1').hide()
+            $('#part3-box-2').hide()
+            $('#part3-box-3').hide()
+            $('#part3-box-4').hide()
+            $('#part3-box-5').hide()
+        })
+
+        function save_oongcomment() {
+            let oongname = $('#oongname').val()
+            let oongcomment = $('#oongcomment').val()
+
+            $.ajax({
+                type: "POST",
+                url: "/comment/oong",
+                data: {'oongname_give': oongname, 'oongcomment_give': oongcomment},
+                success: function (response) {
+                    alert(response["msg"])
+                    window.location.reload()
+                }
+            });
+        }
+
+        function show_comment() {
+            $('#oongcomment-list').empty()
+            $.ajax({
+                type: "GET",
+                url: "/comment/oong",
+                data: {},
+                success: function (response) {
+                    let rows = response['oongcomments']
+                    for (let i = 0; i < rows.length; i++) {
+                        let oongname = rows[i]['oongname']
+                        let oongcomment = rows[i]['oongcomment']
+
+                        let oong_html = `<div class="card">
+                                            <div class="card-body">
+                                                <blockquote class="blockquote mb-0">
+                                                    <p>${oongcomment}</p>
+                                                    <footer class="blockquote-footer">${oongname}</footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>`
+                        $('#oongcomment-list').append(oong_html)
+                    }
+                }
+            });
+        }
+
+        function like_count1() {
+             $.ajax({
+                type: "POST",
+                url: "/like1",
+                data: {},
+                success: function (response) {
+                    alert('누르면 코딩 실력이 올라가요!')
+                    $('#likesu1').text(response['like'])
+                }
+            })
+        }
+
+        function get_like1() {
+            $.ajax({
+                type: "GET",
+                url: "/like1",
+                data: {},
+                success: function (response) {
+                    let likecnt1 = response['like']
+                    $('#likesu1').text(likecnt1)
+                }
+            })
+        }
+
+    </script>
+</head>
+<body>
+<div class="img"></div>
+<div class="img-text">
+    <h1>Non-Fungible Team</h1>
+    <h1>Kim taewoong</h1>
+</div>
+
+<div class="container">
+    <section class="one">
+        <div id="left_to_right_effect">
+        <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fedd15b3a-d65a-4598-8fd1-72081f7c215b%2F20220923_173022_(1).jpg?table=block&id=fdd3cfe3-a91a-4398-b0db-a6f2d81646f9&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=600&userId=36e5afa2-c7c8-438d-af9d-07b387e98208&cache=v2"
+                 alt="image" height=70% width="25%"/>
+            <div style="color: white; width: 85%">
+                <h2 class="paragraph" style=" font-size: 35px; color:#505050">
+                    안녕하세요 <br><br>열정있는 개발자를 꿈꾸는 김태웅입니다.</h2><br>
+
+                <p class="paragraph" style="color: #505050; width: 85%; font-weight:bold"><br>
+                    학습에 대한 의지를 놓지 않고 꾸준히 정진하는 개발자가 되고 싶습니다.<br><br>
+                    MBTI는 INFP로 열정적인 중재자입니다!<br><br> 호기심이 왕성하고, 배려심이 깊은 성격으로<br><br>
+                    협업 스타일은 고집을 내세우기 보다 다른 사람들의 의견을 수용하고 받아들이는 편입니다.<br><br>
+                    코딩을 이제 막 배워 알고 있는 지식이 없다 보니 더 그런 것 같습니다ㅠㅠ
+                   </p>
+            </div>
+        </div>
+    </section>
+    <section class="two">
+
+<div class="text">
+                <ul style="font-size:20px; color:#505050; margin-left:200px; width:250px;" >
+                    <div class="li"><h4>김태웅</h4></div>
+                    <div class="li"><h4>1992년 3월 19일생</h4></div>
+                    <div class="li"><h4>용인 거주</h4></div>
+                    <div class="li"><h4>국민대학교 경영학과 졸업</h4></div>
+                    <div class="li"><h4>좋아하는 음식 : 빵, 수박, 치킨</h4></div>
+                    <div class="li"><h4>블로그 주소<a href="https://velog.io/@ktw2172" class="card-link"><i class="fa fa-search"></i></a></h4></div>
+                    <div class="li"><h4>https://velog.io/@ktw2172</h4></div>
+
+                </ul>
+</div>
+        <div class="intro" style="margin-right:150px;">
+        <img src="https://d32gkk464bsqbe.cloudfront.net/DZY9OcrJM09VSi2oFRQl1pGJay4=/1000x600/contents/o/4d7d4b575eabad0400f1cd904d33bcd69e97ce9f.png" class="rounded float-end" alt="..."
+             style="width:600px";>
+        </div>
+    </section>
+
+     <section class="three">
+        <div class="hobby-card" style="margin-top:auto">
+            <img src="https://www.jejutwn.com/data/photos/20220518/art_16518176203004_022408.jpg"
+                 alt="..." style="width:200px; height:300px;">
+            <p class="paragraph"><strong>
+            <h2 style="margin-left:-55px; font-size : 25px; margin-top:30px">영화, 드라마 보기</영화></h2></p><br>
+            <p style="color: #505050">영화나 드라마 보는 것을 좋아합니다.</P><br>
+            <p style="color: #505050"> 좋아하는 장르는<br> 히어로물, SF, 액션 장르입니다!</strong></p>
+
+
+        </div>
+        <div class="hobby-card" style="margin-top:auto">
+            <img src="https://comicthumb-phinf.pstatic.net/20170217_55/pocket_1487308629360dFB87_JPEG/book.jpg?type=m600x314"
+                 alt="..." style="width:200px; height:300px;">
+
+            <p class="paragraph"><strong>
+            <h2 style="font-size : 25px; margin-top:30px">웹툰</h2></p><br>
+            <p style="color: #505050">네이버 웹툰을 즐겨 봅니다.</p><br>
+            <p style="color: #505050">요새는 무협쪽 웹툰 즐겨 봐요!</p></strong>
+
+
+        </div>
+        <div class="hobby-card" style="margin-top:auto">
+            <img src="https://us.123rf.com/450wm/helga1981/helga19811610/helga1981161000006/63596531-%EC%8A%A4%ED%8F%AC%EC%B8%A0-%EA%B3%A0%EC%96%91%EC%9D%B4-%EB%AC%B4%EA%B2%8C%EC%99%80-%EC%9A%B4%EB%8F%99%EC%9D%84-%ED%95%A0-%EA%B2%83%EC%9E%85%EB%8B%88%EB%8B%A4-%ED%99%94%EC%9D%B4%ED%8A%B8-%EC%A0%88%EC%97%B0.jpg"
+                 alt="..." style="width:200px; height:300px;">
+
+            <p class="paragraph"><strong>
+            <h2 style="font-size : 25px; margin-top:30px">홈트레이닝</h2></p><br>
+            <p style="color: #505050">&nbsp집에서 홈트레이닝 중입니다.</p><br>
+            <p style="color: #505050">&nbsp이러다 죽겠구나 싶어서<br> &nbsp위기감에 운동 중입니다!</p></strong>
+
+
+        </div>
+
+    </section>
+
+   <section class="four">
+
+        <div class="card">
+
+            <img src="https://yozm.wishket.com/media/news/906/image002.jpg" class="card-img-bottom" alt="...">
+        </div>
+
+        <div class="information_box" style="color:gray">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div>
+                <h2 class="paragraph" style="color: #505050; font-size: 80px">되고싶은 개발자</h2><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </div>
+            <div class="card" style="width: 30rem; margin-left:100px; margin-bottom:300px; margin-top:-250px;">
+                <br><br>
+                <ul class="list" style="font-size:30px; color:#505050">
+                    <li class="list">성장하는 개발자</li>
+                    <br>
+                    <li class="list">열정있는 개발자</li>
+                    <br>
+                    <li class="list">포기하지 않는 개발자</li>
+                    <br>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="five">
+        <div class="comment-box">
+            <div class="mb-3">
+                <label for="oongname" class="form-label"></label>
+                <input type="email" class="form-control" id="oongname" placeholder="nickname"
+                       style="width: 295px; font-size: 17px; border: black 6px;">
+            </div>
+            <br>
+            <div class="mb-3">
+                <label for="oongcomment" class="form-label"></label>
+                <textarea class="form-control" id="oongcomment" cols="40" rows="5"
+                          style="font-size: 17px" placeholder="comment here"></textarea>
+            </div>
+            <div style="text-align: center">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;
+                    <button onclick="like_count1()">좋아요</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+                    <button onclick="save_oongcomment(),show_comment()"type="button" class="btn btn-outline-warning">댓글 남기기</button>
+
+                </p>
+            </div>
+        </div>
+        <div id="oongcomment-list">
+
+        </div>
+    </section>
+</div>
+</body>
+</html>
+<!-- dkdkdkd -->

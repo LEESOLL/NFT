@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Bebas Neue';
+        }
+
+        .title {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            /*background-image: url("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2Fbb1VhT%2Fbtrj4WYZZYR%2FPrNDPPIKAzRzd2CwgXKmuk%2Fimg.jpg");*/
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+        }
+
+        .title-text {
+            position: absolute;
+            text-align: center;
+            top: 35%;
+            left: 35%;
+            color: white;
+            font-size: 40px;
+        }
+
+        h1 {
+            color: white;
+            animation: fade ease-in 2s;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+
+        .heading {
+            position: absolute;
+            top: 250px;
+            left: 70px;
+        }
+
+        .paragraph {
+            margin-left: 70px;
+            margin-right: 20px;
+            font-size: 20px;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        /*#left_to_right_effect_1{*/
+        /*    width: 100%;*/
+        /*    height: 100vh;*/
+        /*    display: flex;*/
+        /*    align-items: center;*/
+        /*    justify-content: center;*/
+        /*}*/
+
+        section {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+        }
+
+        /*.container {*/
+        /*    !*height: 100vh;*!*/
+        /*}*/
+
+        /*.one {*/
+        /*    color: white;*/
+
+        /*    height: 100vh;*/
+        /*    width: 100%;*/
+        /*    background-position: center;*/
+        /*    background-size: cover;*/
+        /*    position: relative;*/
+        /*    text-align: center;*/
+        /*}*/
+
+        /*.two {*/
+        /*    color:white;*/
+
+        /*            !*linear-gradient(rgba(0.1, 1, 1, 0.2), rgba(0.1, 1, 0, 0.1));*!*/
+        /*    height: 100vh;*/
+        /*    width: 100%;*/
+        /*    background-position: center;*/
+        /*    background-size: cover;*/
+        /*    position: relative;*/
+        /*    text-align: center;*/
+        /*}*/
+
+        /*.three {*/
+        /*    color: white;*/
+        /*    background-color: #555555;*/
+        /*    !*background-image: linear-gradient(rgba(0.1, 1, 1, 0.2), rgba(0.1, 1, 0, 0.1));*!*/
+        /*    height: 100vh;*/
+        /*    width: 100%;*/
+        /*    background-position: center;*/
+        /*    background-size: cover;*/
+        /*    position: relative;*/
+        /*    text-align: center;*/
+        /*}*/
+
+        /*.four {*/
+        /*    background-color: #808080;*/
+        /*    !*background-image: linear-gradient(rgba(0.1, 1, 1, 0.2), rgba(0.1, 1, 0, 0.1));*!*/
+        /*    height: 100vh;*/
+        /*    width: 100%;*/
+        /*    background-position: center;*/
+        /*    background-size: cover;*/
+        /*    position: relative;*/
+        /*    text-align: center;*/
+        /*}*/
+
+        .five {
+            color: white;
+            /*background-image: linear-gradient(rgba(0.1, 1, 1, 0.2), rgba(0.1, 1, 0, 0.1));*/
+            min-height: 100vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            text-align: center;
+            display: none;
+        }
+
+        .six {
+            background-color: #909090;
+            /*background-image: linear-gradient(rgba(0.1, 1, 1, 0.2), rgba(0.1, 1, 0, 0.1));*/
+            min-height: 100vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: center;
+            text-align: center;
+        }
+
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            width: 85%;
+            margin: auto;
+            padding-bottom: 20px;
+            border: 2px;
+        }
+
+        .card-1 {
+            display: flex;
+            border: 2px;
+        }
+
+        .card-image-1 {
+            width: 30%;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border: black;
+        }
+
+        .card-image-1 img {
+            width: 70%;
+            min-height: 70%;
+        }
+
+        .card-text-1 {
+            width: 70%;
+            padding: 10px;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+
+        nav {
+
+        }
+
+        nav img {
+            width: 150px;
+            height: 150px;
+            padding-top: 20px;
+        }
+
+        .maintitle {
+            flex: 1;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .maintitle a {
+            color: rgb(10, 6, 6);
+            text-decoration: none;
+            font-size: 90px;
+        }
+
+        /* this is underline effect when the cursor hovers over the title */
+        /*
+        .maintitle::after {
+            content: '';
+            width: 0%;
+            height: 6px;
+            background: #090707;
+            display: block;
+            margin: auto;
+            transition: 1s;
+        }
+
+        .maintitle:hover::after {
+            width: 100%;
+        }
+        */
+        /* up to here (hover effect) */
+
+        .button-down-1 {
+            display: none;
+        }
+
+        .button-down-1:hover + .button-down-1 {
+            display: inline-block;
+        }
+
+        /* member profile cards */
+
+        .profile-card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .profile-title {
+            color: grey;
+            font-size: 18px;
+        }
+
+        profile-button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        profile a {
+            text-decoration: none;
+            font-size: 22px;
+            color: black;
+        }
+
+        button:hover, a:hover {
+            opacity: 0.7;
+        }
+
+        /* end of member profile card */
+
+        .comment-box {
+            width: 90%;
+            color: black;
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        a:link {
+            color: black;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        .scroll-trigger {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            position: relative;
+            top: 200px;
+        }
+        .scroll-trigger:hover {
+            border: 3px solid white;
+            cursor: pointer;
+        }
+        .scroll-trigger-up {
+            width: 100px;
+            height: 70px;
+            background-color: white;
+            position: relative;
+            bottom: 100px;
+        }
+        .scroll-trigger-up:hover {
+            border: 3px solid white;
+            cursor: pointer;
+        }
+
+
+
+    </style>
+
+    <script>
+        // window.onload = function () {
+        //     const EFFECT = document.querySelector('#left_to_right_effect');
+        //     window.addEventListener('scroll',scrollEffect);
+        //
+        //     function scrollEffect () {
+        //         if(window.scrollY>=500) {
+        //             EFFECT.style.opacity = '1';
+        //             EFFECT.style.transform = 'translateX(0px)';
+        //             EFFECT.style.transition = '1s ease-in-out';
+        //         }
+        //         else {
+        //             EFFECT.style.opacity = '0';
+        //             EFFECT.style.transform = 'translateX(-50px)';
+        //         }
+        //     }
+        //     scrollEffect();
+        // }
+        $(document).ready(function () {
+            show_comment();
+            get_like5();
+        })
+
+        function save_hongcomment() {
+            let hongname = $('#hongname').val()
+            let hongcomment = $('#hongcomment').val()
+
+            $.ajax({
+                type: "POST",
+                url: "/comment/hong",
+                data: {'hongname_give': hongname, 'hongcomment_give': hongcomment},
+                success: function (response) {
+                    alert(response["msg"])
+                    window.location.reload()
+                }
+            });
+        }
+
+        function show_comment() {
+            $('#hongcomment-list').empty()
+            $.ajax({
+                type: "GET",
+                url: "/comment/hong",
+                data: {},
+                success: function (response) {
+                    let rows = response['hongcomments']
+                    for (let i = 0; i < rows.length; i++) {
+                        let hongname = rows[i]['hongname']
+                        let hongcomment = rows[i]['hongcomment']
+
+                        let hong_html = `<div class="card">
+                                            <div class="card-body">
+                                                <blockquote class="blockquote mb-0">
+                                                    <p>${hongcomment}</p>
+                                                    <footer class="blockquote-footer">${hongname}</footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>`
+                        $('#hongcomment-list').append(hong_html)
+                    }
+                }
+            });
+        }
+
+        function like_count5() {
+             $.ajax({
+                type: "POST",
+                url: "/like5",
+                data: {},
+                success: function (response) {
+                    alert('좋아요 멘트 각자 넣기')
+                    $('#likesu5').text(response['like'])
+                }
+            })
+        }
+
+        function get_like5() {
+            $.ajax({
+                type: "GET",
+                url: "/like5",
+                data: {},
+                success: function (response) {
+                    let likecnt5 = response['like']
+                    $('#likesu5').text(likecnt5)
+                }
+            })
+        }
+
+
+        // const spans = document.querySelectorAll("span")
+        // const fives = document.querySelectorAll(".five")
+        // const firstTop = fives[0].offsetTop
+        // // const secondTop = fives[1].offsetTop
+        // // const thirdTop = fives[2].offsetTop
+        // // const fourthTop = fives[3].offsetTop
+        // // const fifthTop = fives[4].offsetTop
+        // // const sixthTop = fives[5].offsetTop
+        //
+        // spans[0].onclick = function(){
+        //
+        //     window.scroll({top:firstTop, behavior: 'smooth'})
+        // }
+        // spans[1].onclick = function(){
+        //     window.scroll({top:secondTop, behavior: 'smooth'})
+        // }
+        // spans[2].onclick = function(){
+        //     window.scroll({top:thirdTop, behavior: 'smooth'})
+        // }
+        // spans[3].onclick = function(){
+        //     window.scroll({top:fourthTop, behavior: 'smooth'})
+        // }
+        // spans[4].onclick = function(){
+        //     window.scroll({top:fifthTop, behavior: 'smooth'})
+        // }
+        // spans[5].onclick = function(){
+        //     window.scroll({top:sixthTop, behavior: 'smooth'})
+        // }
+         function open_box_1() {
+            $('#1').show()
+             window.scrollTo({ top: 940, behavior: "smooth" })
+        }
+        function open_box_2() {
+            $('#2').show()
+            window.scrollTo({ top: 1880, behavior: "smooth" })
+        }
+        function open_box_3() {
+            $('#3').show()
+            window.scrollTo({ top: 2820, behavior: "smooth" })
+        }
+        function open_box_4() {
+            $('#4').show()
+            window.scrollTo({ top: 3760, behavior: "smooth" })
+        }
+        function open_box_5() {
+            $('#5').show()
+            window.scrollTo({ top: 4700, behavior: "smooth" })
+        }
+        function open_box_6() {
+            $('#6').show()
+            $('#7').show()
+            window.scrollTo({ top: 5640, behavior: "smooth" })
+        }
+        function open_box_7() {
+            window.scrollTo({ top: 0, behavior: "smooth" })
+        }
+
+    </script>
+</head>
+<body>
+<div class="title">
+<div class="title-text">
+    <h1>Non-Fungible Team</h1>
+    <h1>seung.yeop hong</h1>
+    <h1><button onclick="open_box_1()" style="background-color: transparent; border: none ">"><img class="scroll-trigger" src="https://cdn-icons-png.flaticon.com/512/59/59065.png"></button></h1>
+</div>
+</div>
+<div class="container">
+    <section class="five" style="background-color: #181818;" id="1">
+        <div id="left_to_right_effect">
+            <div>
+                <h3 class="paragraph" style="font-size: 100px; margin: auto; text-align: center; font-family: 'Noto Sans', sans-serif;">
+                    MBTI: ENFP </h3><br>
+                <div style=" text-align: center; font-size: 50px; font-family: 'Noto Sans', sans-serif;">재기발랄한 활동가, 스파크형</div>
+                <h1><button onclick="open_box_2()" style="background-color: transparent; border: none ">"><img class="scroll-trigger" src="https://cdn-icons-png.flaticon.com/512/59/59065.png"></button></h1>
+            </div>
+        </div>
+    </section>
+    <section class="five" style="background-color: #252525;" id="2">
+        <div>
+            <div>
+                <h3 class="paragraph" style="font-size: 100px; margin: auto; text-align: center; font-family: 'Noto Sans', sans-serif;">
+                    Strong Point: Brainstormimg </h3><br>
+                <div style="font-size: 50px; font-family: 'Noto Sans', sans-serif;">생각, 상상한 것을 이야기하기를 좋아합니다</div>
+                <h1><button onclick="open_box_3()" style="background-color: transparent; border: none ">"><img class="scroll-trigger" src="https://cdn-icons-png.flaticon.com/512/59/59065.png" alt=""></button></h1>
+            </div>
+
+        </div>
+    </section>
+    <section class="five" style="background-color: #555555;" id="3">
+        <div>
+            <div>
+                <h3 class="paragraph" style="font-size: 100px; margin: auto; text-align: center; font-family: 'Noto Sans', sans-serif;">
+                    Weak Point: Glass Mentality </h3><br>
+                <div style="font-size: 50px; font-family: 'Noto Sans', sans-serif;">혼자서는 흔들려도, 함께라면 흔들리지 않습니다</div>
+                <h1><button onclick="open_box_4()" style="background-color: transparent; border: none ">"><img class="scroll-trigger" src="https://cdn-icons-png.flaticon.com/512/59/59065.png"></button></h1>
+            </div>
+        </div>
+    </section>
+    <section class="five" style="background-color: #808080;" id="4">
+        <div>
+            <div>
+                <h3 class="paragraph" style="font-size: 100px; margin: auto; text-align: center; font-family: 'Noto Sans', sans-serif;">
+                    Cooperation Style: Communicator </h3><br>
+                <div style="font-size: 50px; font-family: 'Noto Sans', sans-serif;">대화로 서로의 상황을 이해하고 협력하는 것을 중요하게 생각합니다</div>
+                <h1><button onclick="open_box_5()" style="background-color: transparent; border: none ">"><img class="scroll-trigger" src="https://cdn-icons-png.flaticon.com/512/59/59065.png" alt=""></button></h1>
+            </div>
+        </div>
+    </section>
+    <section class="five" style="background-color: #909090;" id="5">
+        <div>
+            <div>
+                <h3 class="paragraph" style="font-size: 100px; margin: auto; text-align: center; font-family: 'Noto Sans', sans-serif;">
+                    Hobby: Watching Baduk</h3><br>
+                <div style="font-size: 50px; font-family: 'Noto Sans', sans-serif;">유튜브로 바둑 경기 보는 것을 좋아합니다</div>
+                <h1><button onclick="open_box_6()" style="background-color: transparent; border: none "><img class="scroll-trigger" src="https://cdn-icons-png.flaticon.com/512/59/59065.png" alt=""></button></h1>
+            </div>
+        </div>
+    </section>
+    <section class="five" style="background-color: white;" id="6">
+        <div class="comment-box">
+            <h1><button onclick="open_box_7()" style="background-color: transparent; border: none "><img class="scroll-trigger-up" src="http://cdn.onlinewebfonts.com/svg/img_69740.png" alt=""></button></h1>
+            <div><b>여러분의 마음을 남겨주세요.</b></div><br>
+            <div class="mb-3">
+                <input type="email" class="form-control" id="hongname" placeholder="닉네임"
+                       style="width: 800px; font-size: 25px;">
+            </div>
+            <br>
+            <div class="mb-3">
+                <textarea class="form-control" id="hongcomment" cols="40" rows="5"
+                          style="width: 800px; font-size: 25px" placeholder="댓글을 남겨주세요"></textarea>
+            </div>
+            <div><br>
+                    <div class="buttons">
+                        <button onclick="like_count5()" type="button" class="btn btn-dark">좋아요 👍&nbsp;&nbsp;<span id="likesu5">0</span></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button onclick="save_hongcomment()" type="button" class="btn btn-dark">댓글 남기기</button>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <section class="five" style="background-color: white;" id="7">
+        <div id="hongcomment-list"></div>
+    </section>
+</div>
+</body>
+</html>
+<!-- dkdkdkd -->

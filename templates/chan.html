@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NFTeam: 박찬환</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <link rel="preconnect" href="https://chananabanana.b-cdn.net/photos/"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+            height: 10000px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Bebas Neue';
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: white;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .menulogo {
+            color: #e3dbdb;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 3em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header ul li {
+            list-style: none;
+            margin-left: 20px;
+            color: #e3dbdb;
+        }
+
+        header ul li a {
+            text-decoration: none;
+            padding: 6px 15px;
+            color: #e3dbdb;
+            border-radius: 20px;
+        }
+
+        header ul li a:hover {
+            background: #10112f;
+            color: #e3dbdb;
+        }
+
+        .img {
+            width: 100%;
+            height: 100vh;
+            background-image: url("https://chananabanana.b-cdn.net/photos/sunsetbackground.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+            scroll-snap-align: start;
+        }
+
+        .img-text {
+            position: absolute;
+            top: 40%;
+            left: 30%;
+            color: #e3dbdb;
+            font-size: 40px;
+        }
+
+        h1 {
+            background: linear-gradient(to right, rgb(98, 121, 213), rgb(93, 103, 129));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        );
+            pointer-events: none;
+            animation: fade ease-in 2s;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+
+        .title_name {
+            background: linear-gradient(to right, rgb(154, 189, 197), rgb(59, 85, 138));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        );
+            pointer-events: none;
+            animation: fade 0.6s ease-in 2s;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+
+        .mbti {
+            background: linear-gradient(to right, rgb(39, 5, 80), rgb(202, 156, 239));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .strength {
+            background: linear-gradient(to right, rgb(80, 5, 16), rgb(218, 212, 183));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .collaboration {
+            background: linear-gradient(to right, rgb(15, 80, 5), rgb(194, 232, 227));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hobby {
+            background: linear-gradient(to right, rgb(66, 56, 2), rgb(239, 235, 156));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gangjo {
+            background: linear-gradient(to right, rgb(112, 3, 19), rgb(217, 34, 51));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .paragraph {
+            margin-left: 20px;
+            margin-right: 20px;
+            font-size: 20px;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #left_to_right_effect {
+            width: 100vh;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100%;
+        }
+
+        .one {
+            width: 100%;
+            background: linear-gradient(#090707, #6d73b0);
+            background-size: cover;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        .two_mbti {
+            background: linear-gradient(#6d73b0, #ffffff);
+            min-height: 100vh;
+            width: 100%;
+            background-size: cover;
+            position: relative;
+            padding-bottom: 100px;
+        }
+
+        .three_mbti { /* video */
+            min-height: 100vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            display: flex;
+        }
+
+        .four_strength {
+            background: linear-gradient(#e10404, #ffffff);
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        .five_strength { /* video */
+            min-height: 100vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .six_collaboration {
+            background: linear-gradient(#0b1c11, #ffffff);
+            min-height: 120vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: center;
+        }
+
+        .seven_collaboration { /* video */
+            min-height: 100vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .eight_hobby {
+            background: linear-gradient(#282101, #ffffff);
+            min-height: 130vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .nine_hobby { /* video */
+            min-height: 100vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .comment_section {
+            background: linear-gradient(#ffffff, #080811);
+            min-height: 130vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .contact_section {
+            background: linear-gradient(#080811, #050505);
+            min-height: 130vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+
+        .back-video1 {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        @media (min-aspect-ratio: 1/1) {
+            .back-video1 {
+                width: 100%;
+                height: auto;
+            }
+
+        }
+
+        .zoom {
+            transition: transform .2s;
+        }
+
+        .zoom:hover {
+            -ms-transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+
+        .card-image-1 img {
+            width: 70%;
+            min-height: 70%;
+        }
+
+        nav {
+
+        }
+
+        nav img {
+            width: 150px;
+            height: 150px;
+            padding-top: 20px;
+        }
+
+        profile-button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        profile a {
+            text-decoration: none;
+            font-size: 22px;
+            color: black;
+        }
+
+        button:hover, a:hover {
+            opacity: 0.7;
+        }
+
+        /* end of member profile card */
+
+        a:link {
+            color: black;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+    </style>
+
+    <script>
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
+
+        window.onload = function () {
+            const EFFECT = document.querySelector('#left_to_right_effect');
+
+            window.addEventListener('scroll', scrollEffect);
+
+            function scrollEffect() {
+                if (window.scrollY >= 500) {
+                    EFFECT.style.opacity = '1';
+                    EFFECT.style.transform = 'translateX(0px)';
+                    EFFECT.style.transition = '1s ease-in-out';
+                } else {
+                    EFFECT.style.opacity = '0';
+                    EFFECT.style.transform = 'translateX(-50px)';
+                }
+            }
+
+            scrollEffect();
+
+            const EFFECT2 = document.querySelector('#left_to_right_effect2');
+
+            window.addEventListener('scroll', scrollEffect2);
+
+            function scrollEffect2() {
+                if (window.scrollY >= 1500) {
+                    EFFECT2.style.opacity = '1';
+                    EFFECT2.style.transform = 'translateX(0px)';
+                    EFFECT2.style.transition = '1s ease-in-out';
+                } else {
+                    EFFECT2.style.opacity = '0';
+                    EFFECT2.style.transform = 'translateX(-50px)';
+                }
+            }
+
+            scrollEffect();
+        }
+
+
+        $(document).ready(function () {
+            show_comment();
+            get_like4();
+        })
+
+        function save_chancomment() {
+            let channame = $('#channame').val()
+            let chancomment = $('#chancomment').val()
+
+            $.ajax({
+                type: "POST",
+                url: "/comment/chan",
+                data: {'channame_give': channame, 'chancomment_give': chancomment},
+                success: function (response) {
+                    alert(response["msg"])
+                    window.location.reload()
+                }
+            });
+        }
+
+        $('#chancomment-list').empty()
+            $.ajax({
+                type: "GET",
+                url: "/comment/chan",
+                data: {},
+                success: function (response) {
+                    let rows = response['chancomments']
+                    for (let i = 0; i < rows.length; i++) {
+                        let channame = rows[i]['channame']
+                        let chancomment = rows[i]['chancomment']
+
+                        let chan_html = `<div class="card">
+                                            <div class="card-body">
+                                                <blockquote class="blockquote mb-0">
+                                                    <p>${chancomment}</p>
+                                                    <footer class="blockquote-footer">${channame}</footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>`
+                        $('#chancomment-list').append(chan_html)
+                    }
+                }
+            });
+
+        function like_count4() {
+            $.ajax({
+                type: "POST",
+                url: "/like4",
+                data: {},
+                success: function (response) {
+                    alert('좋아요를 눌러주신 그대는 👼💘')
+                    $('#likesu3').text(response['like'])
+                }
+            })
+        }
+
+        function get_like4() {
+            $.ajax({
+                type: "GET",
+                url: "/like4",
+                data: {},
+                success: function (response) {
+                    let likecnt4 = response['like']
+                    $('#likesu4').text(likecnt4)
+                }
+            })
+        }
+
+    </script>
+</head>
+<body>
+<div class="img">
+    <header>
+        <a class="menulogo" style="color: white">NFT</a>
+        <ul>
+            <li><a href="/" style="color: #e3dbdb">Home</a></li>
+            <li><a href="#about" style="color: #e3dbdb">About</a></li>
+            <li><a href="#" style="color: #e3dbdb">Comments</a></li>
+            <li><a href="#" style="color: #e3dbdb">Contacts</a></li>
+        </ul>
+    </header>
+    <img src="https://chananabanana.b-cdn.net/photos/forestlayer_front.png" id="forestlayer_front"
+         style="display: grid; height: 100%; max-width: 100%; max-height: 100vh; margin: auto">
+</div>
+
+
+<div class="img-text">
+    <h1>Non-Fungible Team:</h1>
+    <h2 class="title_name">Crew. Park Chan Hwan.</h2>
+</div>
+
+<div class="container">
+    <section class="one" id="about">
+        <div id="left_to_right_effect">
+            <section style="padding-top: 82%">
+                <div class="paragraph" style="margin-right: 80px; font-family: 'Trispace', sans-serif">
+                    <a href="#mbti"><img class="zoom" src="https://chananabanana.b-cdn.net/photos/sleepy.jpeg"
+                                         alt="Avatar"
+                                         style="width: 160px; border-radius: 80px"></a>
+                    <div class="container">
+                        <h4 style="text-align: center; color: #ffffff; font-size: 30px">MBTI</h4>
+                        <p style="text-align: center; color: white; font-size: 30px"><i class="fa-solid fa-person"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="paragraph"
+                     style="margin-right: 80px; margin-left: 80px; font-family: 'Trispace', sans-serif">
+                    <a href="#strength"><img class="zoom" src="https://chananabanana.b-cdn.net/photos/surprise.jpeg"
+                                             alt="Avatar"
+                                             style="width: 160px; border-radius: 80px"></a>
+                    <div class="container">
+                        <h4 style="text-align: center; color: white; font-size: 30px">STRENGTHS</h4>
+                        <p style="text-align: center; color: white; font-size: 30px"><i
+                                class="fa-sharp fa-solid fa-hand-fist"></i></p>
+                    </div>
+                </div>
+                <div class="paragraph"
+                     style="margin-right: 80px; margin-left: 80px; font-family: 'Trispace', sans-serif">
+                    <a href="#collaboration"><img class="zoom" src="https://chananabanana.b-cdn.net/photos/tongu.jpeg"
+                                                  alt="Avatar"
+                                                  style="width: 160px; border-radius: 80px"></a>
+                    <div class="container">
+                        <h4 style="text-align: center; color: white; font-size: 30px">COLLABORATION</h4>
+                        <p style="text-align: center; color: white; font-size: 30px"><i
+                                class="fa-solid fa-handshake"></i></p>
+                    </div>
+                </div>
+                <div class="paragraph" style="margin-left: 80px; font-family: 'Trispace', sans-serif">
+                    <a href="#hobby"><img class="zoom" src="https://chananabanana.b-cdn.net/photos/smiley.JPG"
+                                          alt="Avatar"
+                                          style="width: 160px; border-radius: 80px"></a>
+                    <div class="container">
+                        <h4 style="text-align: center; color: white; font-size: 30px">HOBBY</h4>
+                        <p style="text-align: center; color: white; font-size: 30px"><i class="fa-solid fa-guitar"></i>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <!------------------------------------------ MBTI ---------------------------------------------->
+    <section class="two_mbti" id="mbti">
+        <div style="white-space: pre; text-align: center">
+            <p class="mbti" style="font-size: 140px">MBTI</p>
+            <h2 style="font-size: 50px; ">MOST OF THE TIME : INFP</h2>
+            <h2 class="gangjo" style="font-size: 100px">BUT ONCE IN A WHILE : ENFP</h2>
+        </div>
+    </section>
+
+    <section class="three_mbti">  <!------ video -------->
+        <div class="hero">
+            <video src="https://chananabanana.b-cdn.net/photos/ddr.MOV" type="video/MOV" autoplay loop muted playsinline
+                   class="back-video1">
+            </video>
+        </div>
+    </section>
+    <!--------------------------------------------- STRENGTH ---------------------------------------->
+    <section class="four_strength" id="strength">
+        <div style="white-space: pre; text-align: center">
+            <h1 class="strength" style="font-size: 120px">STRENGTHS</h1>
+            <h2 style="font-size: 50px">FILLED WITH ENERGY AND POSITIVITY</h2>
+            <h2 class="gangjo" style="font-size: 100px">AND A PINCH OF CRAZINESS</h2>
+            <p style="font-size: 15px">(in a good way)</p>
+        </div>
+    </section>
+    <section class="five_strength">   <!------ video -------->
+        <div>
+            <video src="https://chananabanana.b-cdn.net/photos/jumping.mov" type="video/mov" autoplay loop muted
+                   playsinline
+                   class="back-video1">
+            </video>
+        </div>
+    </section>
+    <!------------------------------------------- COLLABORATION --------------------------------------->
+    <section class="six_collaboration" id="collaboration">
+        <div style="white-space: pre; text-align: center">
+            <h1 class="collaboration" style="font-size: 110px">COLLABORATION STYLE</h1>
+            <h2 style="font-size: 50px">UNFORTUNATELY, NOT MUCH OF A LEADER</h2>
+            <h2 class="gangjo" style="font-size: 80px">BUT GETS THE JOB DONE FOR ANY TASK GIVEN</h2>
+            <p style="font-size: 20px">(수동적인 사람...ㅎㅎ;)</p>
+        </div>
+    </section>
+
+    <section class="seven_collaboration"> <!------ video -------->
+        <div>
+            <video src="https://chananabanana.b-cdn.net/photos/fakenurse.mov" type="video/mov" autoplay loop muted
+                   playsinline
+                   class="back-video1">
+            </video>
+        </div>
+    </section>
+    <!--------------------------------------------- HOBBY ------------------------------------------->
+    <section class="eight_hobby">
+        <div style="white-space: pre; text-align: center">
+            <h1 class="hobby" style="font-size: 110px">HOBBY</h1>
+            <h2 class="gangjo" style="font-size: 140px">THE UKULELE</h2>
+        </div>
+    </section>
+
+    <section class="nine_hobby">   <!------ video -------->
+        <div>
+            <video src="https://chananabanana.b-cdn.net/photos/uku.MOV" type="video/mov" autoplay loop muted playsinline
+                   class="back-video1">
+            </video>
+        </div>
+    </section>
+    <!-------------------------------------------- COMMENTS ----------------------------------------->
+    <section class="comment_section">
+        <form>
+            <label for="channame">Username:</label><br>
+            <input type="text" id="channame" name="username"><br>
+            <label id="comment">Comment:</label><br>
+            <textarea name="chancomment" form="chancomment" rows="4" cols="40" id="chancomment"></textarea><br><br>
+            <input type="button" onclick="like_count4()" value="좋아용♥️"><span id="likesu4">0</span>
+            <input type="submit" onclick="save_chancomment()" value="Submit">
+        </form>
+        <div id="chancomment-list"></div>
+    </section>
+    <section class="contact_section">
+
+    </section>
+
+</body>
+</html>
