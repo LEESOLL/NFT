@@ -117,6 +117,14 @@
             opacity: 0;
         }
 
+        .box-container {
+            height: 130px;
+            width: 1000px;
+            background: black;
+            text-align: center;
+            vertical-align: top;
+        }
+
         .mbti {
             background: linear-gradient(to right, rgb(39, 5, 80), rgb(202, 156, 239));
             -webkit-background-clip: text;
@@ -415,28 +423,24 @@
         }
 
         $('#chancomment-list').empty()
-            $.ajax({
-                type: "GET",
-                url: "/comment/chan",
-                data: {},
-                success: function (response) {
-                    let rows = response['chancomments']
-                    for (let i = 0; i < rows.length; i++) {
-                        let channame = rows[i]['channame']
-                        let chancomment = rows[i]['chancomment']
+        $.ajax({
+            type: "GET",
+            url: "/comment/chan",
+            data: {},
+            success: function (response) {
+                let rows = response['chancomments']
+                for (let i = 0; i < rows.length; i++) {
+                    let channame = rows[i]['channame']
+                    let chancomment = rows[i]['chancomment']
 
-                        let chan_html = `<div class="card">
-                                            <div class="card-body">
-                                                <blockquote class="blockquote mb-0">
-                                                    <p>${chancomment}</p>
-                                                    <footer class="blockquote-footer">${channame}</footer>
-                                                </blockquote>
-                                            </div>
-                                        </div>`
-                        $('#chancomment-list').append(chan_html)
-                    }
+                    let chan_html = `<div class="box-container">
+                                        <p style="font-size: 20px">${chancomment}</p>
+                                        <p>-${channame}-</p>
+                                     </div>`
+                    $('#chancomment-list').append(chan_html)
                 }
-            });
+            }
+        });
 
         function like_count4() {
             $.ajax({
@@ -471,7 +475,7 @@
         <ul>
             <li><a href="/" style="color: #e3dbdb">Home</a></li>
             <li><a href="#about" style="color: #e3dbdb">About</a></li>
-            <li><a href="#" style="color: #e3dbdb">Comments</a></li>
+            <li><a href="#comments" style="color: #e3dbdb">Comments</a></li>
             <li><a href="#" style="color: #e3dbdb">Contacts</a></li>
         </ul>
     </header>
@@ -586,7 +590,7 @@
         </div>
     </section>
     <!--------------------------------------------- HOBBY ------------------------------------------->
-    <section class="eight_hobby">
+    <section class="eight_hobby" id="hobby">
         <div style="white-space: pre; text-align: center">
             <h1 class="hobby" style="font-size: 110px">HOBBY</h1>
             <h2 class="gangjo" style="font-size: 140px">THE UKULELE</h2>
@@ -601,19 +605,22 @@
         </div>
     </section>
     <!-------------------------------------------- COMMENTS ----------------------------------------->
-    <section class="comment_section">
+    <section class="comment_section" id="comments">
         <form>
             <label for="channame">Username:</label><br>
             <input type="text" id="channame" name="username"><br>
             <label id="comment">Comment:</label><br>
             <textarea name="chancomment" form="chancomment" rows="4" cols="40" id="chancomment"></textarea><br><br>
-            <input type="button" onclick="like_count4()" value="좋아용♥️"><span id="likesu4">0</span>
-            <input type="submit" onclick="save_chancomment()" value="Submit">
+            <button onclick="like_count4()" type="button">좋아요♥️<span id="likesu4">0</span></button>
+            <button onclick="save_chancomment(),show_comment()" type="button">댓글 남기기</button>
         </form>
-        <div id="chancomment-list"></div>
+
     </section>
     <section class="contact_section">
-
+        <div style="white-space: pre; text-align: center; position: absolute; color: white; font-size: 15px">
+            <div id="chancomment-list">
+            </div>
+        </div>
     </section>
 
 </body>
