@@ -133,7 +133,7 @@ def hongcomment_post():
 
 #  -----------------------------------------------  GET START
 @app.route("/comment/main", methods=["GET"])
-def oongcomment_get():
+def maincomment_get():
     maincomment_list = list(db.mainfan.find({}, {'_id': False}))
     return jsonify({'maincomments': maincomment_list})
 
@@ -171,8 +171,8 @@ def hongcomment_get():
 
 
 # ------------------------------------- LIKES ---------------------------------------------
-@app.route('/like0', methods=['POST'])
-def update_like_cnt0():
+@app.route('/like9', methods=['POST'])
+def update_like_cnt9():
     like = db.likes.find_one({'name': '메인'})['likes']
     print(like)
 
@@ -182,8 +182,8 @@ def update_like_cnt0():
     return jsonify({'name': '메인', 'like': like})
 
 
-@app.route('/like0', methods=['GET'])
-def get_like_cnt0():
+@app.route('/like9', methods=['GET'])
+def get_like_cnt9():
     like = db.likes.find_one({'name': '메인'})['likes']
     print(like)
 
