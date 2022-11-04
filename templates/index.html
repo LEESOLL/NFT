@@ -1,84 +1,158 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Non-Fungible Team</title>
+    <title>Document</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-            crossorigin="anonymous"></script>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
         * {
             margin: 0;
             padding: 0;
-            font-family: 'Bebas Neue', cursive;
+            font-family: 'Bebas Neue';
         }
 
-        body {
-            background-image: linear-gradient(rgba(0.1, 1, 1, 0.2), rgba(0.1, 1, 0, 0.1));
-        }
-
-        .header {
+        .title {
             width: 100%;
+            height: 100vh;
+            background-color: black;
+            /*background-image: url("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2Fbb1VhT%2Fbtrj4WYZZYR%2FPrNDPPIKAzRzd2CwgXKmuk%2Fimg.jpg");*/
+            background-repeat: no-repeat;
             background-position: center;
-            background-size: cover;
-            position: relative;
-            padding-top: 18%;
-            padding-bottom: 35%;
-        }
-
-        .part1 { /* 팀 소개페이지 */
-            min-height: 32vh;
-            width: 100%;
-            background-position: center;
-            background-size: cover;
             position: relative;
         }
 
-        .part2 { /* 팀 프로필 카드 */
-            min-height: 68vh;
+        .title-text {
+            position: absolute;
+            text-align: center;
+            top: 35%;
+            left: 35%;
+            color: white;
+            font-size: 40px;
+        }
+
+        h1 {
+            color: white;
+            animation: fade ease-in 2s;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+
+        .heading {
+            position: absolute;
+            top: 250px;
+            left: 70px;
+        }
+
+        .paragraph {
+            margin-left: 70px;
+            margin-right: 20px;
+            font-size: 20px;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        /*#left_to_right_effect_1{*/
+        /*    width: 100%;*/
+        /*    height: 100vh;*/
+        /*    display: flex;*/
+        /*    align-items: center;*/
+        /*    justify-content: center;*/
+        /*}*/
+
+        section {
             width: 100%;
-            background-position: center;
-            background-size: cover;
-            position: relative;
+            height: 100vh;
             display: flex;
-            top: 30%;
+            justify-content: center;
+            align-items: center;
+            color: black;
         }
 
-        .part3 { /* 팀 소개 */
+        /*.container {*/
+        /*    !*height: 100vh;*!*/
+        /*}*/
+
+        /*.one {*/
+        /*    color: white;*/
+
+        /*    height: 100vh;*/
+        /*    width: 100%;*/
+        /*    background-position: center;*/
+        /*    background-size: cover;*/
+        /*    position: relative;*/
+        /*    text-align: center;*/
+        /*}*/
+
+        /*.two {*/
+        /*    color:white;*/
+
+        /*            !*linear-gradient(rgba(0.1, 1, 1, 0.2), rgba(0.1, 1, 0, 0.1));*!*/
+        /*    height: 100vh;*/
+        /*    width: 100%;*/
+        /*    background-position: center;*/
+        /*    background-size: cover;*/
+        /*    position: relative;*/
+        /*    text-align: center;*/
+        /*}*/
+
+        /*.three {*/
+        /*    color: white;*/
+        /*    background-color: #555555;*/
+        /*    !*background-image: linear-gradient(rgba(0.1, 1, 1, 0.2), rgba(0.1, 1, 0, 0.1));*!*/
+        /*    height: 100vh;*/
+        /*    width: 100%;*/
+        /*    background-position: center;*/
+        /*    background-size: cover;*/
+        /*    position: relative;*/
+        /*    text-align: center;*/
+        /*}*/
+
+        /*.four {*/
+        /*    background-color: #808080;*/
+        /*    !*background-image: linear-gradient(rgba(0.1, 1, 1, 0.2), rgba(0.1, 1, 0, 0.1));*!*/
+        /*    height: 100vh;*/
+        /*    width: 100%;*/
+        /*    background-position: center;*/
+        /*    background-size: cover;*/
+        /*    position: relative;*/
+        /*    text-align: center;*/
+        /*}*/
+
+        .five {
+            color: white;
+            /*background-image: linear-gradient(rgba(0.1, 1, 1, 0.2), rgba(0.1, 1, 0, 0.1));*/
             min-height: 100vh;
-            background-position: center;
-            background-size: cover;
-        }
-
-        .part4 { /* 방명록 */
-            min-height: 80vh;
             width: 100%;
             background-position: center;
             background-size: cover;
             position: relative;
-            top: 10%;
+            text-align: center;
+            /*display: none;*/
         }
 
-        .part5 {
+        .six {
+            background-color: #909090;
+            /*background-image: linear-gradient(rgba(0.1, 1, 1, 0.2), rgba(0.1, 1, 0, 0.1));*/
             min-height: 100vh;
             width: 100%;
             background-position: center;
             background-size: cover;
             position: center;
+            text-align: center;
         }
 
         .card-container {
@@ -137,6 +211,7 @@
         }
 
         /* this is underline effect when the cursor hovers over the title */
+        /*
         .maintitle::after {
             content: '';
             width: 0%;
@@ -144,27 +219,18 @@
             background: #090707;
             display: block;
             margin: auto;
-            transition: 1.2s;
+            transition: 1s;
         }
 
         .maintitle:hover::after {
-            width: 42%;
+            width: 100%;
         }
-
+        */
         /* up to here (hover effect) */
 
-        .button-down-1 {
-            display: none;
-        }
-
-        .personal-profile {
-            display: none;
-            height: 500px;
-            margin: auto;
-            width: 70%;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            text-align: center;
-        }
+        /*.button-down-1 {*/
+        /*    display: none;*/
+        /*}*/
 
         .button-down-1:hover + .button-down-1 {
             display: inline-block;
@@ -225,32 +291,85 @@
             text-decoration: none;
         }
 
-        /* this is the comment list section maybe this time it will work */
-
-        .comment-list {
-            width: 90%;
-            color: black;
+        .scroll-trigger {
+            width: 100px;
+            height: 100px;
+            background-color: white;
             position: relative;
-            top: 35%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
+            top: 200px;
         }
-        /* end of comment list */
+        .scroll-trigger:hover {
+            border: 3px solid white;
+            cursor: pointer;
+        }
+        .scroll-trigger-up {
+            width: 100px;
+            height: 70px;
+            background-color: white;
+            position: relative;
+            bottom: 100px;
+        }
+        .scroll-trigger-up:hover {
+            border: 3px solid white;
+            cursor: pointer;
+        }
+
+        .card-list {
+            width: 95%;
+            width: 800px;
+            margin: auto;
+            font-size: 25px;
+            margin-top: 10px;
+        }
+
+        .card-list > .card {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border: solid 1px gray;"
+        }
+
+        .card-body {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-align: left;
+            margin-left: 30px;
+        }
+
+
+
     </style>
+
     <script>
+        // window.onload = function () {
+        //     const EFFECT = document.querySelector('#left_to_right_effect');
+        //     window.addEventListener('scroll',scrollEffect);
+        //
+        //     function scrollEffect () {
+        //         if(window.scrollY>=500) {
+        //             EFFECT.style.opacity = '1';
+        //             EFFECT.style.transform = 'translateX(0px)';
+        //             EFFECT.style.transition = '1s ease-in-out';
+        //         }
+        //         else {
+        //             EFFECT.style.opacity = '0';
+        //             EFFECT.style.transform = 'translateX(-50px)';
+        //         }
+        //     }
+        //     scrollEffect();
+        // }
         $(document).ready(function () {
             show_comment();
-            })
+            get_like5();
+        })
 
-        function save_comment() {
-            let name = $('#name').val()
-            let comment = $('#comment').val()
+        function save_hongcomment() {
+            let hongname = $('#hongname').val()
+            let hongcomment = $('#hongcomment').val()
 
             $.ajax({
                 type: "POST",
-                url: "/guest",
-                data: {'name_give': name, 'comment_give': comment},
+                url: "/comment/hong",
+                data: {'hongname_give': hongname, 'hongcomment_give': hongcomment},
                 success: function (response) {
                     alert(response["msg"])
                     window.location.reload()
@@ -259,334 +378,207 @@
         }
 
         function show_comment() {
-            $('#comment-list').empty()
             $.ajax({
                 type: "GET",
-                url: "/guest",
+                url: "/comment/hong",
                 data: {},
                 success: function (response) {
-                    let rows = response['comments']
+                    let rows = response['hongcomments']
                     for (let i = 0; i < rows.length; i++) {
-                        let name = rows[i]['name']
-                        let comment = rows[i]['comment']
+                        let hongname = rows[i]['hongname']
+                        let hongcomment = rows[i]['hongcomment']
 
-                        let temp_html = `<div class="card">
+                        let hong_html = `<div class="card">
                                             <div class="card-body">
-                                                <blockquote class="blockquote mb-0">
-                                                    <p>${comment}</p>
-                                                    <footer class="blockquote-footer">${name}</footer>
+                                                <blockquote class="blockquote mb-0" style="display: flex;">
+                                                    <footer class="blockquote-footer">${hongname} :</footer>&nbsp;&nbsp;&nbsp; ${hongcomment}
                                                 </blockquote>
                                             </div>
                                         </div>`
-                        $('#comment-list').append(temp_html)
+                        $('#hongcomment-list').append(hong_html)
                     }
                 }
             });
         }
 
-        let likes = 0
-
-        function like_count() {
-            likes = likes + 1
-            $.ajax({
+        function like_count5() {
+             $.ajax({
                 type: "POST",
-                url: "/like",
-                data: {'like_give': likes},
+                url: "/like5",
+                data: {},
                 success: function (response) {
-                    console.log(likes)
+                    alert('좋아요 멘트 각자 넣기')
+                    $('#likesu5').text(response['like'])
                 }
-            });
+            })
         }
 
-        function toggle1() {
-            $('#part3-box-1').slideDown(1000);
-            $('#part3-box-2').hide()
-            $('#part3-box-3').hide()
-            $('#part3-box-4').hide()
-            $('#part3-box-5').hide()
-            }
+        function get_like5() {
+            $.ajax({
+                type: "GET",
+                url: "/like5",
+                data: {},
+                success: function (response) {
+                    let likecnt5 = response['like']
+                    $('#likesu5').text(likecnt5)
+                }
+            })
+        }
 
-        function toggle2() {
-            $('#part3-box-1').hide()
-            $('#part3-box-2').slideDown(1000);
-            $('#part3-box-3').hide()
-            $('#part3-box-4').hide()
-            $('#part3-box-5').hide()
-            }
 
-        function toggle3() {
-            $('#part3-box-1').hide()
-            $('#part3-box-2').hide()
-            $('#part3-box-3').slideDown(1000);
-            $('#part3-box-4').hide()
-            $('#part3-box-5').hide()
-            }
-
-        function toggle4() {
-            $('#part3-box-1').hide()
-            $('#part3-box-2').hide()
-            $('#part3-box-3').hide()
-            $('#part3-box-4').slideDown(1000);
-            $('#part3-box-5').hide()
-            }
-
-        function toggle5() {
-            $('#part3-box-1').hide()
-            $('#part3-box-2').hide()
-            $('#part3-box-3').hide()
-            $('#part3-box-4').hide()
-            $('#part3-box-5').slideDown(1000);
-            }
+        // const spans = document.querySelectorAll("span")
+        // const fives = document.querySelectorAll(".five")
+        // const firstTop = fives[0].offsetTop
+        // // const secondTop = fives[1].offsetTop
+        // // const thirdTop = fives[2].offsetTop
+        // // const fourthTop = fives[3].offsetTop
+        // // const fifthTop = fives[4].offsetTop
+        // // const sixthTop = fives[5].offsetTop
+        //
+        // spans[0].onclick = function(){
+        //
+        //     window.scroll({top:firstTop, behavior: 'smooth'})
+        // }
+        // spans[1].onclick = function(){
+        //     window.scroll({top:secondTop, behavior: 'smooth'})
+        // }
+        // spans[2].onclick = function(){
+        //     window.scroll({top:thirdTop, behavior: 'smooth'})
+        // }
+        // spans[3].onclick = function(){
+        //     window.scroll({top:fourthTop, behavior: 'smooth'})
+        // }
+        // spans[4].onclick = function(){
+        //     window.scroll({top:fifthTop, behavior: 'smooth'})
+        // }
+        // spans[5].onclick = function(){
+        //     window.scroll({top:sixthTop, behavior: 'smooth'})
+        // }
+         function open_box_1() {
+            $('#1').show()
+             window.scrollTo({ top: 940, behavior: "smooth" })
+        }
+        function open_box_2() {
+            $('#2').show()
+            window.scrollTo({ top: 1880, behavior: "smooth" })
+        }
+        function open_box_3() {
+            $('#3').show()
+            window.scrollTo({ top: 2820, behavior: "smooth" })
+        }
+        function open_box_4() {
+            $('#4').show()
+            window.scrollTo({ top: 3760, behavior: "smooth" })
+        }
+        function open_box_5() {
+            $('#5').show()
+            window.scrollTo({ top: 4700, behavior: "smooth" })
+        }
+        function open_box_6() {
+            $('#6').show()
+            $('#7').show()
+            window.scrollTo({ top: 5640, behavior: "smooth" })
+        }
+        function open_box_7() {
+            window.scrollTo({ top: 0, behavior: "smooth" })
+        }
 
     </script>
 </head>
 <body>
-<section class="header">
-    <nav>
-        <div class="maintitle"><a>Non-Fungible Team</a></div>
-    </nav>
-</section> <!-- 제목 페이지 -->
-<section class="part1">
-    <div class="card-container">
-        <div class="card-1"> <!-- Card 1 -->
-         <div class="card-image-1"><img src="https://img.hankyung.com/photo/202207/AD.30616227.1.png" alt="image"/></div>
-            <div class="card-text-1">
-                <p style="font-size: 35px; line-height: 1.4em"><b>NFT (Non-Fungible&nbsp; Team) : 대체&nbsp; 불가능한&nbsp; 존재가&nbsp; 돼라!</b><br></p><br>
-                <p style="font-size: 18px">저희는 &nbsp; 대체 &nbsp;불가능한 &nbsp;토큰&nbsp; NFT(Non-Fungible Token)처럼 &nbsp;대체 &nbsp;불가능한&nbsp;  개발자를 &nbsp;목표로&nbsp; 하는&nbsp; 팀 입니다!</br></p>
-                <br> <hr style="border: solid 3px black; width : 66%;">
+<div class="title">
+<div class="title-text">
+    <h1>Non-Fungible Team</h1>
+    <h1>seung.yeop hong</h1>
+    <h1><button onclick="open_box_1()" style="background-color: transparent; border: none ">"><img class="scroll-trigger" src="https://cdn-icons-png.flaticon.com/512/59/59065.png"></button></h1>
+</div>
+</div>
+<div class="container">
+    <section class="five" style="background-color: #181818;" id="1">
+        <div id="left_to_right_effect">
+            <div>
+                <h3 class="paragraph" style="font-size: 100px; margin: auto; text-align: center; font-family: 'Noto Sans', sans-serif;">
+                    MBTI: ENFP </h3><br>
+                <div style=" text-align: center; font-size: 50px; font-family: 'Noto Sans', sans-serif;">재기발랄한 활동가, 스파크형</div>
+                <h1><button onclick="open_box_2()" style="background-color: transparent; border: none ">"><img class="scroll-trigger" src="https://cdn-icons-png.flaticon.com/512/59/59065.png"></button></h1>
+            </div>
+        </div>
+    </section>
+    <section class="five" style="background-color: #252525;" id="2">
+        <div>
+            <div>
+                <h3 class="paragraph" style="font-size: 100px; margin: auto; text-align: center; font-family: 'Noto Sans', sans-serif;">
+                    Strong Point: Brainstormimg </h3><br>
+                <div style="font-size: 50px; font-family: 'Noto Sans', sans-serif;">생각, 상상한 것을 이야기하기를 좋아합니다</div>
+                <h1><button onclick="open_box_3()" style="background-color: transparent; border: none ">"><img class="scroll-trigger" src="https://cdn-icons-png.flaticon.com/512/59/59065.png" alt=""></button></h1>
+            </div>
+
+        </div>
+    </section>
+    <section class="five" style="background-color: #555555;" id="3">
+        <div>
+            <div>
+                <h3 class="paragraph" style="font-size: 100px; margin: auto; text-align: center; font-family: 'Noto Sans', sans-serif;">
+                    Weak Point: Glass Mentality </h3><br>
+                <div style="font-size: 50px; font-family: 'Noto Sans', sans-serif;">혼자서는 흔들려도, 함께라면 흔들리지 않습니다</div>
+                <h1><button onclick="open_box_4()" style="background-color: transparent; border: none ">"><img class="scroll-trigger" src="https://cdn-icons-png.flaticon.com/512/59/59065.png"></button></h1>
+            </div>
+        </div>
+    </section>
+    <section class="five" style="background-color: #808080;" id="4">
+        <div>
+            <div>
+                <h3 class="paragraph" style="font-size: 100px; margin: auto; text-align: center; font-family: 'Noto Sans', sans-serif;">
+                    Cooperation Style: Communicator </h3><br>
+                <div style="font-size: 50px; font-family: 'Noto Sans', sans-serif;">대화로 서로의 상황을 이해하고 협력하는 것을 중요하게 생각합니다</div>
+                <h1><button onclick="open_box_5()" style="background-color: transparent; border: none ">"><img class="scroll-trigger" src="https://cdn-icons-png.flaticon.com/512/59/59065.png" alt=""></button></h1>
+            </div>
+        </div>
+    </section>
+    <section class="five" style="background-color: #909090;" id="5">
+        <div>
+            <div>
+                <h3 class="paragraph" style="font-size: 100px; margin: auto; text-align: center; font-family: 'Noto Sans', sans-serif;">
+                    Hobby: Watching Baduk</h3><br>
+                <div style="font-size: 50px; font-family: 'Noto Sans', sans-serif;">유튜브로 바둑 경기 보는 것을 좋아합니다</div>
+                <h1><button onclick="open_box_6()" style="background-color: transparent; border: none "><img class="scroll-trigger" src="https://cdn-icons-png.flaticon.com/512/59/59065.png" alt=""></button></h1>
+            </div>
+        </div>
+    </section>
+    <section class="five" style="background-color: white;" id="6">
+        <div class="comment-box">
+            <h1><button onclick="open_box_7()" style="background-color: transparent; border: none "><img class="scroll-trigger-up" src="http://cdn.onlinewebfonts.com/svg/img_69740.png" alt=""></button></h1>
+            <div><b>여러분의 마음을 남겨주세요.</b></div><br>
+            <div class="mb-3">
+                <input type="email" class="form-control" id="hongname" placeholder="닉네임"
+                       style="width: 800px; font-size: 25px;">
+            </div>
+            <br>
+            <div class="mb-3">
+                <textarea class="form-control" id="hongcomment" cols="40" rows="5"
+                          style="width: 800px; font-size: 25px" placeholder="댓글을 남겨주세요"></textarea>
+            </div>
+            <div><br>
+                <div class="buttons">
+                    <button onclick="like_count5()" type="button" class="btn btn-dark">좋아요 👍&nbsp;&nbsp;<span id="likesu5">0</span></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button onclick="save_hongcomment()" type="button" class="btn btn-dark">댓글 남기기</button>
+                </div>
                 <br>
-                <p style="line-height: 1.5em; font-size: 15px;"><p>저희팀은&nbsp 모두 <span style="color: darkslategrey; border-style:double; width:50%; margin:0 auto; padding:3px; text-align:center"><strong>
-                    외교형(NF)</strong></span>으로 &nbsp 구성되어 &nbsp 있습니다.</p> <br>
-                    대체불가한 &nbsp;  팀장은 &nbsp; 재기발랄 활동가,&nbsp; 대체불가한 &nbsp; 팀원 &nbsp;
-                    2명은 &nbsp; 열정적인 &nbsp; 중재자,&nbsp;<br>그리고&nbsp; 대체불가한&nbsp; 팀원&nbsp; 1명은&nbsp; 정의로운&nbsp; 사회운동가까지! <br>
-                    <br>어느 &nbsp; 곳에서도 &nbsp; 스며들고 &nbsp; 녹아들어&nbsp; 협업을&nbsp; 위한&nbsp; 완벽한 &nbsp; 시너지를&nbsp; 만듭니다.</p><p><br> 개발자 &nbsp;붐이&nbsp;
-                    일어난&nbsp; 지&nbsp; 수년&nbsp;째 &nbsp;입니다. <br> 여러&nbsp; 교육&nbsp; 기관을&nbsp; 통해 &nbsp;수요가 &nbsp;충족 &nbsp;되고&nbsp; 있지만&nbsp; 역량&nbsp; 있는&nbsp; 개발자에 대한 &nbsp; 수요는&nbsp; 턱 &nbsp;없이 &nbsp;부족한 &nbsp; 상황입니다. </p><p><br>대체&nbsp; 가능한 &nbsp;역량의&nbsp; 개발자가 &nbsp;아닌,
-                    <strong> <span style="color: darkslategrey; border-style:double; border-color: gray; width:60%; margin:0 auto; padding:3px; text-align:center">대체
-                    불가능한(Non-Fongible)</span></strong>&nbsp; 역량의 &nbsp;개발자가&nbsp; 되기 &nbsp;위해&nbsp; 모인&nbsp; <br><br>저희 <span style="font-size : 18px; color: darkslategrey; border-style:double; width:50%; margin:0 auto; padding:3px; text-align:center"><strong>NFT(Non-Fongible Team)</strong></span>&nbsp;의 팀원들을 소개하겠습니다.
-                    <br><br>
-            </div>
-        </div> <!-- End of Card 1 -->
-    </div>
-</section> <!-- 팀소개 페이지 -->
-<section class="part2">
-    <div class="profile-card" id="profile1" style="width: 15%";>
-        <img onclick=toggle1()
-             src="https://w.namu.la/s/59bbf73b123d0f9f693be3c3de9506b24a1f2a3067b4ffd0207a3a08eee32d750ebf1ca3e33084aa3bbcd6916bd0a8a187cc4556b87fa269c25f1a7ff3ea279f1e372d23aa0a6eee8d5932c70d5dac0e484717f36b344bc0f36df96e7dd97d974dd2f4d51b64ea2324697118cec88c73"
-             alt="김태웅" style="max-width:50%; max-height: 50%">
-        <h1>김태웅</h1>
-        <p class="profile-title">Crew</p>
-        <p>Team 5</p>
-        <a href="#"><i class="fa-regular fa-envelope"></i></a>
-        <a href="#"><i class="fa-regular fa-phone"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-    </div>
-    <div class="profile-card" id="profile2" style="width: 15%">
-        <img onclick=toggle2()
-             src="https://w.namu.la/s/59bbf73b123d0f9f693be3c3de9506b24a1f2a3067b4ffd0207a3a08eee32d750ebf1ca3e33084aa3bbcd6916bd0a8a187cc4556b87fa269c25f1a7ff3ea279f1e372d23aa0a6eee8d5932c70d5dac0e484717f36b344bc0f36df96e7dd97d974dd2f4d51b64ea2324697118cec88c73"
-             alt="김송미" style="max-width:50%; max-height: 50%">
-        <h1>김송미</h1>
-        <p class="profile-title">Crew</p>
-        <p>Team 5</p>
-        <a href="#"><i class="fa-regular fa-envelope"></i></a>
-        <a href="#"><i class="fa-regular fa-phone"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-    </div>
-    <div class="profile-card" id="profile3" style="width: 15%">
-        <img onclick=toggle3()
-             src="https://w.namu.la/s/59bbf73b123d0f9f693be3c3de9506b24a1f2a3067b4ffd0207a3a08eee32d750ebf1ca3e33084aa3bbcd6916bd0a8a187cc4556b87fa269c25f1a7ff3ea279f1e372d23aa0a6eee8d5932c70d5dac0e484717f36b344bc0f36df96e7dd97d974dd2f4d51b64ea2324697118cec88c73"
-             alt="이솔" style="max-width:50%; max-height: 50%">
-        <h1>이솔</h1>
-        <p class="profile-title">Captain</p>
-        <p>Team 5</p>
-        <a href="#"><i class="fa-regular fa-envelope"></i></a>
-        <a href="#"><i class="fa-regular fa-phone"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-    </div>
-    <div class="profile-card" id="profile4" style="width: 15%">
-        <img onclick=toggle4()
-             src="https://w.namu.la/s/59bbf73b123d0f9f693be3c3de9506b24a1f2a3067b4ffd0207a3a08eee32d750ebf1ca3e33084aa3bbcd6916bd0a8a187cc4556b87fa269c25f1a7ff3ea279f1e372d23aa0a6eee8d5932c70d5dac0e484717f36b344bc0f36df96e7dd97d974dd2f4d51b64ea2324697118cec88c73"
-             alt="박찬환" style="max-width:50%; max-height: 50%">
-        <h1>박찬환</h1>
-        <p class="profile-title">Crew</p>
-        <p>Team 5</p>
-        <a href="#"><i class="fa-regular fa-envelope"></i></a>
-        <a href="#"><i class="fa-regular fa-phone"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-    </div>
-    <div class="profile-card" id="profile5" style="width: 15%">
-        <img onclick=toggle5()
-             src="https://w.namu.la/s/59bbf73b123d0f9f693be3c3de9506b24a1f2a3067b4ffd0207a3a08eee32d750ebf1ca3e33084aa3bbcd6916bd0a8a187cc4556b87fa269c25f1a7ff3ea279f1e372d23aa0a6eee8d5932c70d5dac0e484717f36b344bc0f36df96e7dd97d974dd2f4d51b64ea2324697118cec88c73"
-             alt="홍승엽" style="max-width:50%; max-height: 50%">
-        <h1>홍승엽</h1>
-        <p class="profile-title">Crew</p>
-        <p>Team 5</p>
-        <a href="#"><i class="fa-regular fa-envelope"></i></a>
-        <a href="#"><i class="fa-regular fa-phone"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-    </div>
-</section> <!-- 팀원 프로필 카드 -->
-<section class="part3">
-    <div class="personal-profile" id="part3-box-1">
-        <div class="row g-0" style="transform:translate(0,12.5%);">
-            <div class="col-md-4">
-                <img style="height: 400px;"
-                     src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F176a91af-ed31-4e25-9bfb-d0e47a73aa2e%2FKakaoTalk_20221102_092504072.jpg?table=block&id=0bd32cb6-bc2f-408f-8da9-70604c20cafe&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=11fad463-5be8-4633-a5ab-aa8ae5a25974&cache=v2"
-                     class="img-fluid rounded-start" alt="김태웅">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body" style="text-align: left">
-                    <h5 class="card-title" style="font-size: 50px">김태웅</h5><br>
-                    <div style="font-size: 25px; border-left: thick solid #32a1ce; border-color: black; padding-left: 50px;">
-                        <p class="card-text" style="font-size: 30px">MBTI: ENFP</p>
-                        <p class="card-text">장점: 장점이 많음, 단점도 많음</p>
-                        <p class="card-text">협업 스타일: 헌신적, 이기적</p>
-                        <p class="card-text">블로그: <a href="https://velog.io/@milnil">velog.io/@milnil</a></p>
-                        <p class="card-text"><small class="text-muted">프로필 내용</small></p>
+                <div class="card-list" id="hongcomment-list">
+                    <div class="card">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0" style="display: flex;">
+                                <footer class="blockquote-footer">${hongname} :</footer>&nbsp;&nbsp;&nbsp; ${hongcomment}
+                            </blockquote>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="personal-profile" id="part3-box-2">
-        <div class="row g-0" style="transform:translate(0,12.5%);">
-            <div class="col-md-4">
-                <img style="height: 400px;"
-                     src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F176a91af-ed31-4e25-9bfb-d0e47a73aa2e%2FKakaoTalk_20221102_092504072.jpg?table=block&id=0bd32cb6-bc2f-408f-8da9-70604c20cafe&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=11fad463-5be8-4633-a5ab-aa8ae5a25974&cache=v2"
-                     class="img-fluid rounded-start" alt="김송미">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body" style="text-align: left">
-                    <h5 class="card-title" style="font-size: 50px">김송미</h5><br>
-                    <div style="font-size: 25px; border-left: thick solid #32a1ce; border-color: black; padding-left: 50px;">
-                        <p class="card-text" style="font-size: 30px">MBTI: ENFP</p>
-                        <p class="card-text">장점: 장점이 많음, 단점도 많음</p>
-                        <p class="card-text">협업 스타일: 헌신적, 이기적</p>
-                        <p class="card-text">블로그: <a href="https://velog.io/@milnil">velog.io/@milnil</a></p>
-                        <p class="card-text"><small class="text-muted">프로필 내용</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="personal-profile" id="part3-box-3">
-        <div class="row g-0" style="transform:translate(0,12.5%);">
-            <div class="col-md-4">
-                <img style="height: 400px;"
-                     src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F176a91af-ed31-4e25-9bfb-d0e47a73aa2e%2FKakaoTalk_20221102_092504072.jpg?table=block&id=0bd32cb6-bc2f-408f-8da9-70604c20cafe&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=11fad463-5be8-4633-a5ab-aa8ae5a25974&cache=v2"
-                     class="img-fluid rounded-start" alt="이솔">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body" style="text-align: left">
-                    <h5 class="card-title" style="font-size: 50px">이솔</h5><br>
-                    <div style="font-size: 25px; border-left: thick solid #32a1ce; border-color: black; padding-left: 50px;">
-                        <p class="card-text" style="font-size: 30px">MBTI: ENFP</p>
-                        <p class="card-text">장점: 장점이 많음, 단점도 많음</p>
-                        <p class="card-text">협업 스타일: 헌신적, 이기적</p>
-                        <p class="card-text">블로그: <a href="https://velog.io/@milnil">velog.io/@milnil</a></p>
-                        <p class="card-text"><small class="text-muted">프로필 내용</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="personal-profile" id="part3-box-4">
-        <div class="row g-0" style="transform:translate(0,12.5%);">
-            <div class="col-md-4">
-                <img style="height: 400px;"
-                     src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F176a91af-ed31-4e25-9bfb-d0e47a73aa2e%2FKakaoTalk_20221102_092504072.jpg?table=block&id=0bd32cb6-bc2f-408f-8da9-70604c20cafe&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=11fad463-5be8-4633-a5ab-aa8ae5a25974&cache=v2"
-                     class="img-fluid rounded-start" alt="박찬환">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body" style="text-align: left">
-                    <h5 class="card-title" style="font-size: 50px">박찬환</h5><br>
-                    <div style="font-size: 25px; border-left: thick solid #32a1ce; border-color: black; padding-left: 50px;">
-                        <p class="card-text" style="font-size: 30px">MBTI: ENFP</p>
-                        <p class="card-text">장점: 장점이 많음, 단점도 많음</p>
-                        <p class="card-text">협업 스타일: 헌신적, 이기적</p>
-                        <p class="card-text">블로그: <a href="https://velog.io/@milnil">velog.io/@milnil</a></p>
-                        <p class="card-text"><small class="text-muted">프로필 내용</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="personal-profile" id="part3-box-5">
-        <div class="row g-0" style="transform:translate(0,12.5%);">
-            <div class="col-md-4">
-                <img style="height: 400px;"
-                     src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F176a91af-ed31-4e25-9bfb-d0e47a73aa2e%2FKakaoTalk_20221102_092504072.jpg?table=block&id=0bd32cb6-bc2f-408f-8da9-70604c20cafe&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=11fad463-5be8-4633-a5ab-aa8ae5a25974&cache=v2"
-                     class="img-fluid rounded-start" alt="홍승엽">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body" style="text-align: left">
-                    <h5 class="card-title" style="font-size: 50px">홍승엽</h5><br>
-                    <div style="font-size: 25px; border-left: thick solid #32a1ce; border-color: black; padding-left: 50px;">
-                        <p class="card-text" style="font-size: 30px">MBTI: ENFP</p>
-                        <p class="card-text">장점: 장점이 많음, 단점도 많음</p>
-                        <p class="card-text">협업 스타일: 헌신적, 이기적</p>
-                        <p class="card-text">블로그: <a href="https://velog.io/@milnil">velog.io/@milnil</a></p>
-                        <p class="card-text"><small class="text-muted">프로필 내용</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section><!-- 팀 소개 -->
-<section class="part4">
-    <div class="comment-box">
-        <div class="mb-3">
-            <label for="name" class="form-label">닉네임&nbsp;</label>
-            <input type="email" class="form-control" id="name" placeholder="nickname"
-                   style="width: 295px; font-size: 17px; border: black 6px;">
-        </div>
-        <br>
-        <div class="mb-3">
-            <label for="comment" class="form-label">댓글&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-            <textarea class="form-control" id="comment" cols="40" rows="5"
-                      style="font-size: 17px" placeholder="comment here"></textarea>
-        </div>
-        <div style="text-align: center">
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;
-                <button onclick="like_count()">좋아요</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-                <button onclick="save_comment(),show_comment()">댓글 남기기</button>
-            </p>
-        </div>
-    </div>
-</section><!-- 방명록 -->
-<section class="part5">
-    <div class="comment-list">
-        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">List group item heading</h5>
-                <small>3 days ago</small>
-            </div>
-            <p class="mb-1">Some placeholder content in a paragraph.</p>
-            <small>And some small print.</small>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">List group item heading</h5>
-                <small class="text-muted">3 days ago</small>
-            </div>
-            <p class="mb-1">Some placeholder content in a paragraph.</p>
-            <small class="text-muted">And some muted small print.</small>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">List group item heading</h5>
-                <small class="text-muted">3 days ago</small>
-            </div>
-            <p class="mb-1">Some placeholder content in a paragraph.</p>
-            <small class="text-muted">And some muted small print.</small>
-        </a>
-    </div>
-</section>
+    </section>
+    <section>
+    </section>
+</div>
 </body>
 </html>
-
-<!-- NFT 로고 <a href="index.html"><img src="https://cdn-icons-png.flaticon.com/512/6699/6699362.png" width="100" height="100"></a> -->
+<!-- dkdkdkd -->
