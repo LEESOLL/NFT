@@ -242,16 +242,17 @@
     <script>
         $(document).ready(function () {
             show_comment();
+            get_like0();
         })
 
-        function save_comment() {
-            let name = $('#name').val()
-            let comment = $('#comment').val()
+        function save_maincomment() {
+            let mainname = $('#mainname').val()
+            let maincomment = $('#maincomment').val()
 
             $.ajax({
                 type: "POST",
-                url: "/guest",
-                data: {'name_give': name, 'comment_give': comment},
+                url: "/comment/main",
+                data: {'mainname_give': mainname, 'maincomment_give': maincomment},
                 success: function (response) {
                     alert(response["msg"])
                     window.location.reload()
@@ -260,43 +261,53 @@
         }
 
         function show_comment() {
-            $('#comment-list').empty()
+            $('#maincomment-list').empty()
             $.ajax({
                 type: "GET",
-                url: "/guest",
+                url: "/comment/main",
                 data: {},
                 success: function (response) {
-                    let rows = response['comments']
+                    let rows = response['maincomments']
                     for (let i = 0; i < rows.length; i++) {
-                        let name = rows[i]['name']
-                        let comment = rows[i]['comment']
+                        let mainname = rows[i]['mainname']
+                        let maincomment = rows[i]['maincomment']
 
-                        let temp_html = `<div class="card">
+                        let main_html = `<div class="card">
                                             <div class="card-body">
                                                 <blockquote class="blockquote mb-0">
-                                                    <p>${comment}</p>
-                                                    <footer class="blockquote-footer">${name}</footer>
+                                                    <p>${maincomment}</p>
+                                                    <footer class="blockquote-footer">${mainname}</footer>
                                                 </blockquote>
                                             </div>
                                         </div>`
-                        $('#comment-list').append(temp_html)
+                        $('#maincomment-list').append(main_html)
                     }
                 }
             });
         }
 
-        let likes = 0
-
-        function like_count() {
-            likes = likes + 1
+        function like_count0() {
             $.ajax({
                 type: "POST",
-                url: "/like",
-                data: {'like_give': likes},
+                url: "/like0",
+                data: {},
                 success: function (response) {
-                    console.log(likes)
+                    alert('좋아요를 눌러주신 그대는 👼💘')
+                    $('#likesu0').text(response['like'])
                 }
-            });
+            })
+        }
+
+        function get_like0() {
+            $.ajax({
+                type: "GET",
+                url: "/like0",
+                data: {},
+                success: function (response) {
+                    let likecnt0 = response['like']
+                    $('#likesu0').text(likecnt0)
+                }
+            })
         }
 
     </script>
@@ -407,50 +418,26 @@
 <section class="part4">
     <div class="comment-box" style="padding-left: 470px">
         <div class="mb-3">
-            <label for="name" class="form-label">닉네임&nbsp;</label>
-            <input type="email" class="form-control" id="name" placeholder="nickname"
+            <label for="mainname" class="form-label">닉네임&nbsp;</label>
+            <input type="email" class="form-control" id="mainname" placeholder="nickname"
                    style="width: 200px; font-size: 17px; border: black 6px;">
         </div>
         <br>
         <div class="mb-3">
-            <label for="comment" class="form-label">댓글</label>
-            <textarea class="form-control" id="comment"
+            <label for="maincomment" class="form-label">댓글</label>
+            <textarea class="form-control" id="maincomment"
                       style="font-size: 17px; width: 50%" placeholder="comment here"></textarea>
         </div>
         <div style="text-align: center">
             <p>
-                <button onclick="like_count()">좋아요</button>
-                <button onclick="save_comment(),show_comment()">댓글 남기기</button>
+                <button onclick="like_count0()">좋아요😈<span id="likesu0">0</span></button>
+                <button onclick="save_maincomment(),show_comment()">댓글 남기기</button>
             </p>
         </div>
     </div>
 </section><!-- 방명록 -->
 <section class="part5">
-    <div class="comment-list">
-        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">List group item heading</h5>
-                <small>3 days ago</small>
-            </div>
-            <p class="mb-1">Some placeholder content in a paragraph.</p>
-            <small>And some small print.</small>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">List group item heading</h5>
-                <small class="text-muted">3 days ago</small>
-            </div>
-            <p class="mb-1">Some placeholder content in a paragraph.</p>
-            <small class="text-muted">And some muted small print.</small>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">List group item heading</h5>
-                <small class="text-muted">3 days ago</small>
-            </div>
-            <p class="mb-1">Some placeholder content in a paragraph.</p>
-            <small class="text-muted">And some muted small print.</small>
-        </a>
+    <div class="maincomment-list">
     </div>
 </section>
 </body>
