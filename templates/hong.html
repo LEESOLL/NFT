@@ -141,11 +141,11 @@
             background-size: cover;
             position: relative;
             text-align: center;
-            display: none;
+            /*display: none;*/
         }
 
         .six {
-            background-color: #909090;
+            color: white;
             /*background-image: linear-gradient(rgba(0.1, 1, 1, 0.2), rgba(0.1, 1, 0, 0.1));*/
             min-height: 100vh;
             width: 100%;
@@ -228,9 +228,9 @@
         */
         /* up to here (hover effect) */
 
-        .button-down-1 {
-            display: none;
-        }
+        /*.button-down-1 {*/
+        /*    display: none;*/
+        /*}*/
 
         .button-down-1:hover + .button-down-1 {
             display: inline-block;
@@ -314,6 +314,27 @@
             cursor: pointer;
         }
 
+        .card-list {
+            width: 95%;
+            width: 800px;
+            margin: auto;
+            font-size: 25px;
+            margin-top: 10px;
+        }
+
+        .card-list > .card {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border: solid 1px gray;"
+        }
+
+        .card-body {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-align: left;
+            margin-left: 30px;
+        }
+
 
 
     </style>
@@ -357,7 +378,6 @@
         }
 
         function show_comment() {
-            $('#hongcomment-list').empty()
             $.ajax({
                 type: "GET",
                 url: "/comment/hong",
@@ -370,9 +390,8 @@
 
                         let hong_html = `<div class="card">
                                             <div class="card-body">
-                                                <blockquote class="blockquote mb-0">
-                                                    <p>${hongcomment}</p>
-                                                    <footer class="blockquote-footer">${hongname}</footer>
+                                                <blockquote class="blockquote mb-0" style="display: flex;">
+                                                    <footer class="blockquote-footer">${hongname} :</footer>&nbsp;&nbsp;&nbsp; ${hongcomment}
                                                 </blockquote>
                                             </div>
                                         </div>`
@@ -540,15 +559,17 @@
                           style="width: 800px; font-size: 25px" placeholder="댓글을 남겨주세요"></textarea>
             </div>
             <div><br>
-                    <div class="buttons">
-                        <button onclick="like_count5()" type="button" class="btn btn-dark">좋아요 👍&nbsp;&nbsp;<span id="likesu5">0</span></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <button onclick="save_hongcomment()" type="button" class="btn btn-dark">댓글 남기기</button>
-                    </div>
+                <div class="buttons">
+                    <button onclick="like_count5()" type="button" class="btn btn-dark">좋아요 👍&nbsp;&nbsp;<span id="likesu5">0</span></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button onclick="save_hongcomment()" type="button" class="btn btn-dark">댓글 남기기</button>
+                </div>
+                <br>
             </div>
         </div>
     </section>
-    <section class="five" style="background-color: white;" id="7">
-        <div id="hongcomment-list"></div>
+    <section>
+        <div class="card-list" id="hongcomment-list">
+        </div>
     </section>
 </div>
 </body>

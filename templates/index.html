@@ -145,7 +145,7 @@
         }
 
         .six {
-            background-color: #909090;
+            color: white;
             /*background-image: linear-gradient(rgba(0.1, 1, 1, 0.2), rgba(0.1, 1, 0, 0.1));*/
             min-height: 100vh;
             width: 100%;
@@ -564,19 +564,33 @@
                     <button onclick="save_hongcomment()" type="button" class="btn btn-dark">댓글 남기기</button>
                 </div>
                 <br>
-                <div class="card-list" id="hongcomment-list">
-                    <div class="card">
-                        <div class="card-body">
-                            <blockquote class="blockquote mb-0" style="display: flex;">
-                                <footer class="blockquote-footer">${hongname} :</footer>&nbsp;&nbsp;&nbsp; ${hongcomment}
-                            </blockquote>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
     <section>
+        <div class="card-list" id="hongcomment-list">
+            <div class="card">
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0" style="display: flex;">
+                        <footer class="blockquote-footer">${hongname} :</footer>&nbsp;&nbsp;&nbsp; ${hongcomment}
+                    </blockquote>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0" style="display: flex;">
+                        <footer class="blockquote-footer">${hongname} :</footer>&nbsp;&nbsp;&nbsp; ${hongcomment}
+                    </blockquote>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0" style="display: flex;">
+                        <footer class="blockquote-footer">${hongname} :</footer>&nbsp;&nbsp;&nbsp; ${hongcomment}
+                    </blockquote>
+                </div>
+            </div>
+        </div>
     </section>
 </div>
 </body>
