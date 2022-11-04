@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Bebas Neue';
+        }
+
+        .img {
+            width: 100%;
+            height: 100vh;
+            background-image: url("https://images.pexels.com/photos/284951/pexels-photo-284951.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+            scroll-snap-align: start;
+        }
+
+        .img-text {
+            position: absolute;
+            top: 70%;
+            left: 55%;
+            color: black;
+            font-size: 40px;
+        }
+
+        h1 {
+            background: linear-gradient(to right, rgb(199, 219, 245), rgb(242, 243, 248));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        );
+            pointer-events: none;
+            animation: fade ease-in 3s;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+
+        .heading {
+            position: absolute;
+            top: 250px;
+            left: 70px;
+        }
+
+        .paragraph {
+            margin-left: 70px;
+            margin-right: 20px;
+            font-size: 20px;
+        }
+
+        .img2 {
+            width: 100%;
+            height: 325px;
+            background-image: url("");
+            background-size: cover;
+            margin-right: 70px;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #left_to_right_effect {
+            width: 100;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+        }
+
+        .container {
+            height: 100vh;
+        }
+
+        .one {
+            background-color: black;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .two {
+            background-color: black;
+            min-height: 32vh;
+            width: 100%;
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .three {
+            background-image: linear-gradient(rgba(0.1, 1, 1, 0.2), rgba(0.1, 1, 0, 0.1));
+            min-height: 68vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            display: flex;
+        }
+
+        .four {
+            background-image: linear-gradient(rgba(0.1, 1, 1, 0.2), rgba(0.1, 1, 0, 0.1));
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .five {
+            background-image: linear-gradient(rgba(0.1, 1, 1, 0.2), rgba(0.1, 1, 0, 0.1));
+            min-height: 80vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .six {
+            background-image: linear-gradient(rgba(0.1, 1, 1, 0.2), rgba(0.1, 1, 0, 0.1));
+            min-height: 100vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: center;
+        }
+
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            width: 85%;
+            margin: auto;
+            padding-bottom: 20px;
+            border: 2px;
+        }
+
+        .card-1 {
+            display: flex;
+            border: 2px;
+        }
+
+        .card-image-1 {
+            width: 30%;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border: black;
+        }
+
+        .card-image-1 img {
+            width: 70%;
+            min-height: 70%;
+        }
+
+        .card-text-1 {
+            width: 70%;
+            padding: 10px;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+
+        nav {
+
+        }
+
+        nav img {
+            width: 150px;
+            height: 150px;
+            padding-top: 20px;
+        }
+
+        .maintitle {
+            flex: 1;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .maintitle a {
+            color: rgb(10, 6, 6);
+            text-decoration: none;
+            font-size: 90px;
+        }
+
+        /* this is underline effect when the cursor hovers over the title */
+        /*
+        .maintitle::after {
+            content: '';
+            width: 0%;
+            height: 6px;
+            background: #090707;
+            display: block;
+            margin: auto;
+            transition: 1s;
+        }
+
+        .maintitle:hover::after {
+            width: 100%;
+        }
+        */
+        /* up to here (hover effect) */
+
+        .button-down-1 {
+            display: none;
+        }
+
+
+        .button-down-1:hover + .button-down-1 {
+            display: inline-block;
+        }
+
+        /* member profile cards */
+
+        .profile-card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .profile-title {
+            color: grey;
+            font-size: 18px;
+        }
+
+        profile-button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        profile a {
+            text-decoration: none;
+            font-size: 22px;
+            color: black;
+        }
+
+        button:hover, a:hover {
+            opacity: 0.7;
+        }
+
+        /* end of member profile card */
+
+        .comment-box {
+            width: 90%;
+            color: black;
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        a:link {
+            color: black;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        .infocard {
+            border-color: white;
+        }
+
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            get_like2()
+        })
+        window.onload = function () {
+            const EFFECT = document.querySelector('#left_to_right_effect');
+
+            window.addEventListener('scroll',scrollEffect);
+
+            function scrollEffect () {
+                if(window.scrollY>=500) {
+                    EFFECT.style.opacity = '1';
+                    EFFECT.style.transform = 'translateX(0px)';
+                    EFFECT.style.transition = '1s ease-in-out';
+                }
+                else {
+                    EFFECT.style.opacity = '0';
+                    EFFECT.style.transform = 'translateX(-50px)';
+                }
+            }
+            scrollEffect();
+        }
+        $(document).ready(function () {
+            show_comment();
+            $('#part3-box-1').hide()
+            $('#part3-box-2').hide()
+            $('#part3-box-3').hide()
+            $('#part3-box-4').hide()
+            $('#part3-box-5').hide()
+        })
+
+        function save_songcomment() {
+            let songname = $('#songname').val()
+            let songcomment = $('#songcomment').val()
+
+            $.ajax({
+                type: "POST",
+                url: "/comment/song",
+                data: {'songname_give': songname, 'songcomment_give': songcomment},
+                success: function (response) {
+                    alert(response["msg"])
+                    window.location.reload()
+                }
+            });
+        }
+
+        function show_comment() {
+            $('#songcomment-list').empty()
+            $.ajax({
+                type: "GET",
+                url: "/comment/song",
+                data: {},
+                success: function (response) {
+                    let rows = response['songcomments']
+                    for (let i = 0; i < rows.length; i++) {
+                        let songname = rows[i]['songname']
+                        let songcomment = rows[i]['songcomment']
+
+                        let song_html = `<div class="card">
+                                            <div class="card-body">
+                                                <blockquote class="blockquote mb-0">
+                                                    <p>${songcomment}</p>
+                                                    <footer class="blockquote-footer">${songname}</footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>`
+                        $('#songcomment-list').append(song_html)
+                    }
+                }
+            });
+        }
+
+        let likes = 0
+
+        function like_count2() {
+            $.ajax({
+                type: "POST",
+                url: "/like2",
+                data: {},
+                success: function (response) {
+                    alert('감사해요❤️')
+                    $('#likesu2').text(response['like'])
+                }
+            })
+        }
+       function get_like2() {
+            $.ajax({
+                type: "GET",
+                url: "/like2",
+                data: {},
+                success: function (response) {
+                    let likecnt2 = response['like']
+                    $('#likesu2').text(likecnt2)
+                }
+            })
+        }
+        function showing1() {
+            $('#part3-box-2').hide()
+            $('#part3-box-3').hide()
+            $('#part3-box-4').hide()
+            $('#part3-box-5').hide()
+            $('#part3-box-1').show()
+        }
+
+        function showing2() {
+            $('#part3-box-1').hide()
+            $('#part3-box-3').hide()
+            $('#part3-box-4').hide()
+            $('#part3-box-5').hide()
+            $('#part3-box-2').show()
+        }
+
+        function showing3() {
+            $('#part3-box-1').hide()
+            $('#part3-box-2').hide()
+            $('#part3-box-4').hide()
+            $('#part3-box-5').hide()
+            $('#part3-box-3').show()
+        }
+
+        function showing4() {
+            $('#part3-box-1').hide()
+            $('#part3-box-2').hide()
+            $('#part3-box-3').hide()
+            $('#part3-box-5').hide()
+            $('#part3-box-4').show()
+        }
+
+        function showing5() {
+            $('#part3-box-1').hide()
+            $('#part3-box-2').hide()
+            $('#part3-box-3').hide()
+            $('#part3-box-4').hide()
+            $('#part3-box-5').show()
+        }
+
+    </script>
+</head>
+<body>
+<div class="img"></div>
+<div class="img-text">
+    <h1>Non-Fungible Team</h1>
+    <h1>SONGMI KIM</h1>
+</div>
+
+<div class="container">
+    <section class="one">
+        <div id="left_to_right_effect">
+            <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/41fe9340-3103-44dd-9197-b1bd130bc4ce/drew-beamer-3SIXZisims4-unsplash.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221103T175317Z&X-Amz-Expires=86400&X-Amz-Signature=14f6a74d531e550077c76ddb68c78ebbe41db5b1238eb7cb30bbb4711014ca45&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22drew-beamer-3SIXZisims4-unsplash.jpg%22&x-id=GetObject"
+                 alt="image" width="40%"/>
+            <div>
+                <h2 class="paragraph" style="color: white; font-size: 30px">about MI: <br>이렇게 큰 도전은 처음이에요!</h2><br>
+                 <h3 class="paragraph" style="color: white; font-size: 20px; font-family: 'Noto Sans', sans-serif;">
+                    잘 다니던 회사 그만 두고 <br>
+                     정신 차리고 눈 떠보니 캠프에 참여하고 있는 김송미입니다.</h3><br>
+                <p class="paragraph" style="color: white; width: 85%; line-height: 2">
+                    회사를 이렇게 오래 쉬어본 적도 없고 하루 종일 공부만 해본 건 오랜만인 만큼 <br>개발 공부라는 인생이 흔들릴 수도 있는 인생도전 중이에요.<br>같은 확신으로 함께하는 모두들 응원합니다❤<br>
+                    🤍MBTI: ENTJ #친구좋아요 #진심 #공감 #응원 #함께 #소통<br>
+                    🤍장점: 큰일이던 작은 일이던 계획을 세워 놓치는게 없도록 노력합니다.<br>
+                    🤍협업스타일: 모두의 이야기를 먼저 듣고 제 의견도 공유한 후 모든 의견을 바탕으로 "이렇게 하면 어떨까요?" 전체의 의견을 정리를 해보려고 합니다.
+
+            </div>
+        </div>
+    </section>
+
+    <section class="two">
+    </section>
+    <section class="four">
+
+    </section>
+    <section class="five">
+        <div class="comment-box">
+            <div class="mb-3">
+                <label for="songname" class="form-label">닉네임&nbsp;</label>
+                <input type="email" class="form-control" id="songname" placeholder="nickname"
+                       style="width: 295px; font-size: 17px; border: black 6px;">
+            </div>
+            <br>
+            <div class="mb-3">
+                <label for="songcomment" class="form-label">댓글&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <textarea class="form-control" id="songcomment" cols="40" rows="5"
+                          style="font-size: 17px" placeholder="comment here"></textarea>
+            </div>
+            <div style="text-align: center">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;
+                    <button onclick="like_count2()" type="button" class="btn btn-dark">좋아요👍<span id="likesu2">0</span></button>
+                    <button onclick="save_songcomment(),show_comment()" type="button" class="btn btn-dark">댓글 남기기</button>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="six">
+        <div id="songcomment-list"></div>
+    </section>
+</div>
+</body>
+</html>
+<!-- dkdkdkd -->
