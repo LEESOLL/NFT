@@ -242,7 +242,7 @@
     <script>
         $(document).ready(function () {
             show_comment();
-            get_like9();
+            get_like6();
         })
 
         function save_maincomment() {
@@ -282,26 +282,25 @@
             });
         }
 
-        function like_count9() {
+        function get_like6() {
             $.ajax({
-                type: "POST",
-                url: "/like9",
+                type: "GET",
+                url: "/like6",
                 data: {},
                 success: function (response) {
-                    alert('좋아요를 눌러주신 그대는 👼💘')
-                    $('#likesu9').text(response['like'])
+                    let likecnt6 = response['like']
+                    $('#likesu6').text(likecnt6)
                 }
             })
         }
-
-        function get_like9() {
+         function like_count6() {
             $.ajax({
-                type: "GET",
-                url: "/like9",
+                type: "POST",
+                url: "/like6",
                 data: {},
                 success: function (response) {
-                    let likecnt9 = response['like']
-                    $('#likesu9').text(likecnt9)
+                    alert('좋아요를 눌러주신 그대는 👼💘')
+                    $('#likesu6').text(response['like'])
                 }
             })
         }
@@ -409,6 +408,26 @@
         <a href="#"><i class="fa-brands fa-instagram"></i></a>
     </div>
 </section> <!-- 팀원 프로필 카드 -->
+<section>
+    <div class="card-promise" style="width: 18rem; top: 10px; margin-top: 200px; margin-left: 500px">
+        <div class="card-header" style="background-color: darkgrey;">
+            NFT만의 약속
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">1. 지각 안하기</li>
+            <li class="list-group-item">2. 잠수 안타기</li>
+            <li class="list-group-item">3. 적극적으로 임하기</li>
+            <li class="list-group-item">4. 서로 존중하고 배려하기</li>
+            <li class="list-group-item">5. 잘 모르겠어도 자신감 갖기</li>
+            <li class="list-group-item">6. 주눅 들지 않기</li>
+            <li class="list-group-item">7. 겸손하기</li>
+            <li class="list-group-item">8. 해낼 수 있다는 확신 갖기</li>
+            <li class="list-group-item">9. 아프지 말고 건강하기</li>
+            <li class="list-group-item">10. 취뽀 해버리기</li>
+        </ul>
+    </div>
+</section>
+
 
 <section class="part4">
     <div class="comment-box" style="padding-left: 470px">
@@ -425,7 +444,7 @@
         </div>
         <div style="text-align: center">
             <p>
-                <button onclick="like_count9()">좋아요😈<span id="likesu9">0</span></button>
+                  <button onclick="like_count6()">좋아요<span id="likesu6">0</span></button>
                 <button onclick="save_maincomment(),show_comment()">댓글 남기기</button>
             </p>
         </div>

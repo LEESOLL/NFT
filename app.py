@@ -7,7 +7,6 @@ from pymongo import MongoClient
 client = MongoClient("mongodb+srv://test:sparta@cluster0.9pyyebx.mongodb.net/Cluster0?retryWrites=true&w=majority")
 db = client.dbsparta
 
-
 # ------------------------------------------ CONNECTION ----------------------------------------
 
 
@@ -44,19 +43,6 @@ def hong():
 # ------------------------------------------ COMMENTS ------------------------------------------
 
 # ------------------------------------------------------------ POST START
-@app.route("/comment/main", methods=["POST"])
-def maincomment_post():
-    mainname_receive = request.form["mainname_give"]
-    maincomment_receive = request.form["maincomment_give"]
-
-    doc = {
-        'mainname': mainname_receive,
-        'maincomment': maincomment_receive
-    }
-
-    db.mainfan.insert_one(doc)
-    return jsonify({'msg': '앙응원띠!'})
-
 
 @app.route("/comment/oong", methods=["POST"])
 def oongcomment_post():
@@ -132,11 +118,6 @@ def hongcomment_post():
 
 
 #  -----------------------------------------------  GET START
-@app.route("/comment/main", methods=["GET"])
-def maincomment_get():
-    maincomment_list = list(db.mainfan.find({}, {'_id': False}))
-    return jsonify({'maincomments': maincomment_list})
-
 
 @app.route("/comment/oong", methods=["GET"])
 def oongcomment_get():
@@ -171,24 +152,6 @@ def hongcomment_get():
 
 
 # ------------------------------------- LIKES ---------------------------------------------
-@app.route('/like9', methods=['POST'])
-def update_like_cnt9():
-    like = db.likes.find_one({'name': '메인'})['likes']
-    print(like)
-
-    db.likes.update_one({'name': '메인'}, {'$set': {'likes': like + 1}})
-    like = db.likes.find_one({'name': '메인'})['likes']
-
-    return jsonify({'name': '메인', 'like': like})
-
-
-@app.route('/like9', methods=['GET'])
-def get_like_cnt9():
-    like = db.likes.find_one({'name': '메인'})['likes']
-    print(like)
-
-    return jsonify({'name': '메인', 'like': like})
-
 
 @app.route('/like1', methods=['POST'])
 def update_like_cnt1():
@@ -283,6 +246,24 @@ def get_like_cnt5():
     print(like)
 
     return jsonify({'name': '홍승엽', 'like': like})
+
+@app.route('/like6', methods=['POST'])
+def update_like_cnt6():
+    like = db.likes.find_one({'name': 'main'})['likes']
+    print(like)
+
+    db.likes.update_one({'name': 'main'}, {'$set': {'likes': like + 1}})
+    like = db.likes.find_one({'name': 'main'})['likes']
+
+    return jsonify({'name': 'main', 'like': like})
+
+
+@app.route('/like6', methods=['GET'])
+def get_like_cnt6():
+    like = db.likes.find_one({'name': 'main'})['likes']
+    print(like)
+
+    return jsonify({'name': 'main', 'like': like})
 
 
 if __name__ == '__main__':
